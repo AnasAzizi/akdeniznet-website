@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <!-- tailwind element  -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com/3.3.0"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          fontFamily: {
+            sans: ["Roboto", "sans-serif"],
+            body: ["Roboto", "sans-serif"],
+            mono: ["ui-monospace", "monospace"],
+          },
+        },
+        corePlugins: {
+          preflight: false,
+        },
+      };
+    </script>
+
+    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- fav-icon -->
+    <link rel="icon" href="images/favicon.png" />
+    <!-- title -->
+    <title>Akdeniznet</title>
+  </head>
+
+  <body>
+    <div class="container m-auto max-w-7xl px-6 py-4 md:py-5">
+      <!-----------------------------navbar------------------------->
+      <nav
+        class="flex items-center justify-between font-semibold text-[#0077b6]"
+      >
+        <!-- Logo -->
+        <div class="w-52 md:w-64">
+          <img src="images/akdeniz-net-logo.png" />
+        </div>
+
+        <!-- Menu -->
+        <div class="hidden h-10 font-alata md:flex md:space-x-4">
+          <div class="group text-xl">
+            <a class="nav" href="#">Anasayfa</a>
+          </div>
+
+          <div class="group text-xl">
+            <a class="nav" href="#ikinci">Hizmetlerimiz</a>
+          </div>
+          <div class="group text-xl">
+            <a class="nav" href="#">Multimedia</a>
+          </div>
+
+          <div class="group text-xl">
+            <ul>
+              <li class="inline-block relative">
+                <a class="nav block text-left text-xl" href="#Tarifelerimiz"
+                  >Tarifelerimiz</a
+                >
+                <ul class="drop-down">
+                  <a class="hover:text-[#0077b6]" href="#Tarifelerimiz"
+                    ><li class="block">bireysel</li></a
+                  >
+                  <a class="hover:text-[#0077b6]" href="#kurumsal-simetrik"
+                    ><li class="block">Kurumsal Simetrik</li></a
+                  >
+                  <a class="hover:text-[#0077b6]" href="#kurumsal-asimetrik"
+                    ><li class="block">Kurumsal Asimetrik</li></a
+                  >
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <div class="group text-xl">
+            <a class="nav" href="#hiz-testi">Hız testi</a>
+          </div>
+
+          <div class="group text-xl">
+            <a class="nav" href="#iletisim">İletişim</a>
+          </div>
+
+          <div
+            class="group text-xl text-white rounded-lg text-center w-40 h-9 duration-300 hover:bg-white hover:text-[#FBB116] bg-[#FBB116]"
+          >
+            <a target="_blank" href="https://oim.akdeniznet.com.tr/login/index"
+              >Online ödeme</a
+            >
+          </div>
+        </div>
+        <!-- Hamburger Button -->
+        <div class="md:hidden">
+          <button
+            id="menu-btn"
+            type="button"
+            class="z-40 block hamburger md:hidden focus:outline-none"
+          >
+            <span class="hamburger-top"></span>
+            <span class="hamburger-middle"></span>
+            <span class="hamburger-bottom"></span>
+          </button>
+        </div>
+      </nav>
+      <!-- Mobile Menu -->
+      <div
+        id="menu"
+        class="absolute z-10 top-0 bottom-0 left-0 hidden flex-col self-end w-full h-[520px] py-1 pt-40 pl-12 space-y-3 text-lg text-white uppercas bg-zinc-800 bg-opacity-90"
+      >
+        <a href="#" class="hover:text-[#F37A04]">Anasayfa</a>
+        <a href="#ikinci" class="hover:text-[#F37A04]">Hizmetlerimiz</a>
+        <a href="#Tarifelerimiz" class="hover:text-[#F37A04]">Tarifelerimiz</a>
+        <a href="#hiz-testi" class="hover:text-[#F37A04]">Hız testi</a>
+        <a href="#iletisim" class="hover:text-[#F37A04]">İletişim</a>
+        <a
+          target="_blank"
+          href="https://oim.akdeniznet.com.tr/login/index"
+          class="font-semibold text-[#FBB116] hover:text-[#F37A04]"
+          >Online ödeme</a
+        >
+      </div>
+    </div>
+    <!-----------------------------carousel----------------------------->
+
+    <div
+      id="carouselExampleCaptions"
+      class="relative"
+      data-te-carousel-init
+      data-te-ride="carousel"
+    >
+      <!--Carousel indicators-->
+      <div
+        class="absolute bottom-0 left-0 right-0 z-[2] mx-[15%] mb-4 flex list-none justify-center p-0"
+        data-te-carousel-indicators
+      >
+        <button
+          type="button"
+          data-te-target="#carouselExampleCaptions"
+          data-te-slide-to="0"
+          data-te-carousel-active
+          class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-black bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-te-target="#carouselExampleCaptions"
+          data-te-slide-to="1"
+          class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-black bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-te-target="#carouselExampleCaptions"
+          data-te-slide-to="2"
+          class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-black bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+
+      <!--Carousel items-->
+      <div
+        class="relative w-full overflow-hidden after:clear-both after:block after:content-['']"
+      >
+        <!--First item-->
+        <div
+          class="relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+          data-te-carousel-active
+          data-te-carousel-item
+          style="backface-visibility: hidden"
+        >
+          <img src="images/desktop/arkaplan-1.jpg" class="block w-full" />
+        </div>
+        <!--Second item-->
+        <div
+          class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+          data-te-carousel-item
+          style="backface-visibility: hidden"
+        >
+          <img src="images/desktop/arkaplan-2.jpg" class="block w-full" />
+        </div>
+        <!--Third item-->
+        <div
+          class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+          data-te-carousel-item
+          style="backface-visibility: hidden"
+        >
+          <img src="images/desktop/arkaplan-3.jpg" class="block w-full" />
+        </div>
+      </div>
+
+      <!--Carousel controls - prev item-->
+      <button
+        class="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+        type="button"
+        data-te-target="#carouselExampleCaptions"
+        data-te-slide="prev"
+      >
+        <span class="inline-block h-8 w-8">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="h-6 w-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M15.75 19.5L8.25 12l7.5-7.5"
+            />
+          </svg>
+        </span>
+        <span
+          class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+          >Previous</span
+        >
+      </button>
+      <!--Carousel controls - next item-->
+      <button
+        class="absolute bottom-0 right-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+        type="button"
+        data-te-target="#carouselExampleCaptions"
+        data-te-slide="next"
+      >
+        <span class="inline-block h-8 w-8">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="h-6 w-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M8.25 4.5l7.5 7.5-7.5 7.5"
+            />
+          </svg>
+        </span>
+        <span
+          class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+          >Next</span
+        >
+      </button>
+    </div>
+    <!-----------------------------Telephone/whatsapp icon---------------------------->
+    <a href="tel:+90 533 319 63 07" target="_blank" class="tel-icon"
+      ><i class="fa-solid fa-phone"></i
+    ></a>
+    <a href="https://wa.me/08504718783" target="_blank" class="whatsapp-icon"
+      ><i class="fa-brands fa-whatsapp"></i
+    ></a>
+    <span class="up"><i class="fa-solid fa-arrow-up"></i></span>
+    <!-----------------------------second Section---------------------------->
+    <section id="ikinci">
+      <!-- second Container -->
+      <div class="container max-w-6xl mx-auto my-16 px-6 text-gray-900 md:px-0">
+        <!-- Creations Header -->
+        <div class="flex justify-center mb-20">
+          <h2
+            id="Hizmetlerimiz"
+            class="text-4xl font-bold text-center pt-5 uppercase md:text-center md:text-5xl"
+          >
+            Hizmetlerimiz
+          </h2>
+        </div>
+      </div>
+
+      <div
+        class="relative container flex flex-col max-w-6xl mx-auto my-32 px-6 text-gray-900 md:flex-row md:px-0"
+      >
+        <!-- Image -->
+        <div class="md:ml-96"><img src="images/desktop/666.jpg" /></div>
+
+        <!-- Text Container -->
+        <div
+          class="top-48 pr-0 bg-white md:absolute md:left-0 md:py-20 md:pl-20"
+        >
+          <h2
+            class="max-w-lg mt-10 mb-8 font-semibold text-4xl text-center text-[#F37A04] md:text-5xl md:mt-0 md:text-left"
+          >
+            Modem Kurulumu
+          </h2>
+
+          <p class="max-w-md text-center text-lg font-bold md:text-left">
+            Akdeniznet'te şeffaf fiyatlandırma politikası vardır. Örneğin ilk
+            başta modem ücreti yok! deyip sonrasında aylık faturanıza modem
+            ücreti yansıtılmaz.
+          </p>
+        </div>
+      </div>
+      <!-------------------------------------->
+      <div
+        class="relative container flex flex-col max-w-6xl mx-auto my-32 px-6 text-gray-900 md:flex-row md:px-0"
+      >
+        <!-- Image -->
+        <img src="images/desktop/arkaplan-5.jpg" />
+
+        <!-- Text Container -->
+        <div
+          class="top-48 pr-0 bg-white md:absolute md:right-0 md:py-20 md:pl-20"
+        >
+          <h2
+            class="max-w-lg mt-10 mb-6 font-semibold text-4xl text-center text-[#F37A04] md:text-5xl md:mt-0 md:text-left"
+          >
+            Fiber İnternet
+          </h2>
+
+          <p class="max-w-md text-center text-lg font-bold md:text-left">
+            Akdeniznet'te şeffaf fiyatlandırma politikası vardır. Örneğin ilk
+            başta modem ücreti yok! deyip sonrasında aylık faturanıza modem
+            ücreti yansıtılmaz.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tarifelerimiz Section -->
+
+    <!-- bireysel Container -->
+    <div class="container max-w-6xl mx-auto my-16 px-6 text-gray-900 md:px-0">
+      <!-- Creations Header -->
+      <div class="flex justify-center mb-20">
+        <h2
+          id="Tarifelerimiz"
+          class="text-4xl font-bold text-center pt-5 uppercase md:text-center md:text-5xl"
+        >
+          Tarifelerimiz
+        </h2>
+      </div>
+
+      <div class="flex justify-center mb-8 md:mb-20">
+        <h2
+          id="Tarifelerimiz"
+          class="text-xl text-white px-20 md:px-72 pb-2 bg-[#3A53DE] rounded-lg text-center pt-5 uppercase md:text-center md:text-5xl"
+        >
+          Bireysel
+        </h2>
+      </div>
+      <!-- Items Container -->
+      <div class="item-container">
+        <!-- Item 1 -->
+        <div class="group item">
+          <!-- Desktop Image -->
+          <a href="https://oim.akdeniznet.com.tr/login/index"
+            ><img
+              src="images/desktop/bireysel/4mbps.jpg"
+              class="hidden w-full duration-300 md:block group-hover:opacity-50 hover:scale-105"
+          /></a>
+
+          <!-- Mobile Image -->
+          <a
+            class="hover:opacity-60 duration-300"
+            href="https://oim.akdeniznet.com.tr/login/index"
+          >
+            <img
+              src="images/mobile/bireysel/4mbps.jpg"
+              class="w-full md:hidden"
+          /></a>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="group item">
+          <!-- Desktop Image -->
+          <a href="https://oim.akdeniznet.com.tr/login/index"
+            ><img
+              src="images/desktop/bireysel/6mbps.jpg"
+              class="hidden w-full duration-300 md:block group-hover:opacity-50 hover:scale-105"
+          /></a>
+
+          <!-- Mobile Image -->
+          <a
+            class="hover:opacity-60 duration-300"
+            href="https://oim.akdeniznet.com.tr/login/index"
+          >
+            <img
+              src="images/mobile/bireysel/6mbps.jpg"
+              class="w-full md:hidden"
+          /></a>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="group item">
+          <!-- Desktop Image -->
+          <a href="https://oim.akdeniznet.com.tr/login/index"
+            ><img
+              src="images/desktop/bireysel/10mbps.jpg"
+              class="hidden w-full duration-300 md:block group-hover:opacity-50 hover:scale-105"
+          /></a>
+
+          <!-- Mobile Image -->
+          <a
+            class="hover:opacity-60 duration-300"
+            href="https://oim.akdeniznet.com.tr/login/index"
+            ><img
+              src="images/mobile/bireysel/10mbps.jpg"
+              class="w-full md:hidden"
+          /></a>
+        </div>
+      </div>
+
+      <!-- Item Container 2 -->
+      <div class="item-container mt-10">
+        <!-- Item 1 -->
+        <div class="group item">
+          <!-- Desktop Image -->
+          <a href="https://oim.akdeniznet.com.tr/login/index"
+            ><img
+              src="images/desktop/bireysel/12mbps.jpg"
+              class="hidden w-full duration-300 md:block group-hover:opacity-50 hover:scale-105"
+          /></a>
+
+          <!-- Mobile Image -->
+          <a
+            class="hover:opacity-60 duration-300"
+            href="https://oim.akdeniznet.com.tr/login/index"
+            ><img
+              src="images/mobile/bireysel/12mbps.jpg"
+              class="w-full md:hidden"
+          /></a>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="group item">
+          <!-- Desktop Image -->
+          <!-- Desktop Image -->
+          <a href="https://oim.akdeniznet.com.tr/login/index"
+            ><img
+              src="images/desktop/bireysel/16mbps.jpg"
+              class="hidden w-full duration-300 md:block group-hover:opacity-50 hover:scale-105"
+          /></a>
+
+          <!-- Mobile Image -->
+          <a
+            class="hover:opacity-60 duration-300"
+            href="https://oim.akdeniznet.com.tr/login/index"
+            ><img
+              src="images/mobile/bireysel/16mbps.jpg"
+              class="w-full md:hidden"
+          /></a>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="group item">
+          <!-- Desktop Image -->
+          <a href="https://oim.akdeniznet.com.tr/login/index"
+            ><img
+              src="images/desktop/bireysel/25mbps.jpg"
+              class="hidden w-full duration-300 md:block group-hover:opacity-50 hover:scale-105"
+          /></a>
+
+          <!-- Mobile Image -->
+          <a
+            class="hover:opacity-60 duration-300"
+            href="https://oim.akdeniznet.com.tr/login/index"
+            ><img
+              src="images/mobile/bireysel/25mbps.jpg"
+              class="w-full md:hidden"
+          /></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- btn -->
+    <div class="flex justify-center mb-20">
+      <button
+        class="btn px-12 text-md md:text-3xl rounded-lg text-white duration-300 hover:bg-white hover:text-[#F37A04] bg-[#F37A04] md:block"
+      >
+        <a href="https://oim.akdeniznet.com.tr/login/index">hemen başvur</a>
+      </button>
+    </div>
+
+    <!------------------------------------kurumsal-simetrik----------------------------------------->
+
+    <!-- Tarifelerimiz Section -->
+    <!-- kurumsal-simetrik Container -->
+    <div
+      class="container max-w-6xl mx-auto my-16 mt-10 md:mt-52 px-6 text-gray-900 md:px-0"
+    >
+      <!-- Creations Header -->
+      <div class="flex justify-center mb-8 md:mb-20">
+        <h2
+          id="kurumsal-simetrik"
+          class="text-xl text-white px-12 md:px-48 pb-2 bg-[#3A53DE] rounded-lg text-center pt-5 uppercase md:text-center md:text-5xl"
+        >
+          kurumsal simetrik
+        </h2>
+      </div>
+      <!-- Items Container -->
+      <div class="item-container">
+        <!-- Item 1 -->
+        <div class="group item">
+          <!-- Desktop Image -->
+          <a href="https://oim.akdeniznet.com.tr/login/index"
+            ><img
+              src="images/desktop/KURUMSAL SIMETRIK/800.jpg"
+              class="hidden w-full duration-300 md:block group-hover:opacity-50 hover:scale-105"
+          /></a>
+          <!-- Mobile Image -->
+          <a
+            class="hover:opacity-60 duration-300"
+            href="https://oim.akdeniznet.com.tr/login/index"
+          >
+            <img
+              src="images/mobile/KURUMSAL SIMETRIK/800.jpg"
+              class="w-full md:hidden"
+          /></a>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="group item">
+          <!-- Desktop Image -->
+          <a href="https://oim.akdeniznet.com.tr/login/index"
+            ><img
+              src="images/desktop/KURUMSAL SIMETRIK/1200.jpg"
+              class="hidden w-full duration-300 md:block group-hover:opacity-50 hover:scale-105"
+          /></a>
+          <!-- Mobile Image -->
+          <a
+            class="hover:opacity-60 duration-300"
+            href="https://oim.akdeniznet.com.tr/login/index"
+          >
+            <img
+              src="images/mobile/KURUMSAL SIMETRIK/1200.jpg"
+              class="w-full md:hidden"
+          /></a>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="group item">
+          <!-- Desktop Image -->
+          <a href="https://oim.akdeniznet.com.tr/login/index"
+            ><img
+              src="images/desktop/KURUMSAL SIMETRIK/1800.jpg"
+              class="hidden w-full duration-300 md:block group-hover:opacity-50 hover:scale-105"
+          /></a>
+          <!-- Mobile Image -->
+          <a
+            class="hover:opacity-60 duration-300"
+            href="https://oim.akdeniznet.com.tr/login/index"
+            ><img
+              src="images/mobile/KURUMSAL SIMETRIK/1800.jpg"
+              class="w-full md:hidden"
+          /></a>
+        </div>
+      </div>
+
+      <!-- Item Container 2 -->
+      <div class="item-container mt-10">
+        <!-- Item 1 -->
+        <div class="group item">
+          <!-- Desktop Image -->
+          <!-- Desktop Image -->
+          <a href="https://oim.akdeniznet.com.tr/login/index"
+            ><img
+              src="images/desktop/KURUMSAL SIMETRIK/5000.jpg"
+              class="hidden w-full duration-300 md:block group-hover:opacity-50 hover:scale-105"
+          /></a>
+
+          <!-- Mobile Image -->
+          <a
+            class="hover:opacity-60 duration-300"
+            href="https://oim.akdeniznet.com.tr/login/index"
+            ><img
+              src="images/mobile/KURUMSAL SIMETRIK/5000.jpg"
+              class="w-full md:hidden"
+          /></a>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="group item">
+          <!-- Desktop Image -->
+          <a href="https://oim.akdeniznet.com.tr/login/index"
+            ><img
+              src="images/desktop/KURUMSAL SIMETRIK/200m.jpg"
+              class="hidden w-full duration-300 md:block group-hover:opacity-50 hover:scale-105"
+          /></a>
+          <!-- Mobile Image -->
+          <a
+            class="hover:opacity-60 duration-300"
+            href="https://oim.akdeniznet.com.tr/login/index"
+            ><img
+              src="images/mobile/KURUMSAL SIMETRIK/200m.jpg"
+              class="w-full md:hidden"
+          /></a>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="group item">
+          <!-- Desktop Image -->
+          <a href="https://oim.akdeniznet.com.tr/login/index"
+            ><img
+              src="images/desktop/KURUMSAL SIMETRIK/500m.jpg"
+              class="hidden w-full duration-300 md:block group-hover:opacity-50 hover:scale-105"
+          /></a>
+          <!-- Mobile Image -->
+          <a
+            class="hover:opacity-60 duration-300"
+            href="https://oim.akdeniznet.com.tr/login/index"
+            ><img
+              src="images/mobile/KURUMSAL SIMETRIK/500m.jpg"
+              class="w-full md:hidden"
+          /></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- btn -->
+    <div class="flex justify-center mb-20">
+      <button
+        class="btn px-12 text-md md:text-3xl rounded-lg text-white duration-300 hover:bg-white hover:text-[#F37A04] bg-[#F37A04] md:block"
+      >
+        <a href="https://oim.akdeniznet.com.tr/login/index">hemen başvur</a>
+      </button>
+    </div>
+
+    <!-----------------------------------kurumsal-asimetrik------------------------------------------>
+
+    <!-- Tarifelerimiz Section -->
+    <!-- kurumsal-asimetrik Container -->
+    <div
+      class="container max-w-6xl mx-auto my-16 mt-10 md:mt-52 px-6 text-gray-900 md:px-0"
+    >
+      <!-- Creations Header -->
+      <div class="flex justify-center mb-8 md:mb-20">
+        <h2
+          id="kurumsal-asimetrik"
+          class="text-xl text-white px-12 md:px-44 pb-2 bg-[#3A53DE] rounded-lg text-center pt-5 uppercase md:text-center md:text-5xl"
+        >
+          kurumsal asimetrik
+        </h2>
+      </div>
+      <!-- Items Container -->
+      <div class="item-container">
+        <!-- Item 1 -->
+        <div class="group item">
+          <!-- Desktop Image -->
+          <a href="https://oim.akdeniznet.com.tr/login/index"
+            ><img
+              src="images/desktop/KURUMSAL ASIMETRIK/350tl.jpg"
+              class="hidden w-full duration-300 md:block group-hover:opacity-50 hover:scale-105"
+          /></a>
+          <!-- Mobile Image -->
+          <a
+            class="hover:opacity-60 duration-300"
+            href="https://oim.akdeniznet.com.tr/login/index"
+          >
+            <img
+              src="images/mobile/KURUMSAL ASIMETRIK/350tl.jpg"
+              class="w-full md:hidden"
+          /></a>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="group item">
+          <!-- Desktop Image -->
+          <a href="https://oim.akdeniznet.com.tr/login/index"
+            ><img
+              src="images/desktop/KURUMSAL ASIMETRIK/400tl.jpg"
+              class="hidden w-full duration-300 md:block group-hover:opacity-50 hover:scale-105"
+          /></a>
+          <!-- Mobile Image -->
+          <a
+            class="hover:opacity-60 duration-300"
+            href="https://oim.akdeniznet.com.tr/login/index"
+          >
+            <img
+              src="images/mobile/KURUMSAL ASIMETRIK/400tl.jpg"
+              class="w-full md:hidden"
+          /></a>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="group item">
+          <!-- Desktop Image -->
+          <a href="https://oim.akdeniznet.com.tr/login/index"
+            ><img
+              src="images/desktop/KURUMSAL ASIMETRIK/550tl.jpg"
+              class="hidden w-full duration-300 md:block group-hover:opacity-50 hover:scale-105"
+          /></a>
+          <!-- Mobile Image -->
+          <a
+            class="hover:opacity-60 duration-300"
+            href="https://oim.akdeniznet.com.tr/login/index"
+            ><img
+              src="images/mobile/KURUMSAL ASIMETRIK/550tl.jpg"
+              class="w-full md:hidden"
+          /></a>
+        </div>
+      </div>
+
+      <!-- Item Container 2 -->
+      <div class="item-container mt-10">
+        <!-- Item 1 -->
+        <div class="group item">
+          <!-- Desktop Image -->
+          <!-- Desktop Image -->
+          <a href="https://oim.akdeniznet.com.tr/login/index"
+            ><img
+              src="images/desktop/KURUMSAL ASIMETRIK/800tl.jpg"
+              class="hidden w-full duration-300 md:block group-hover:opacity-50 hover:scale-105"
+          /></a>
+
+          <!-- Mobile Image -->
+          <a
+            class="hover:opacity-60 duration-300"
+            href="https://oim.akdeniznet.com.tr/login/index"
+            ><img
+              src="images/mobile/KURUMSAL ASIMETRIK/800tl.jpg"
+              class="w-full md:hidden"
+          /></a>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="group item">
+          <!-- Desktop Image -->
+          <a href="https://oim.akdeniznet.com.tr/login/index"
+            ><img
+              src="images/desktop/KURUMSAL ASIMETRIK/1250tl.jpg"
+              class="hidden w-full duration-300 md:block group-hover:opacity-50 hover:scale-105"
+          /></a>
+          <!-- Mobile Image -->
+          <a
+            class="hover:opacity-60 duration-300"
+            href="https://oim.akdeniznet.com.tr/login/index"
+            ><img
+              src="images/mobile/KURUMSAL ASIMETRIK/1250tl.jpg"
+              class="w-full md:hidden"
+          /></a>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="group item">
+          <!-- Desktop Image -->
+          <a href="https://oim.akdeniznet.com.tr/login/index"
+            ><img
+              src="images/desktop/KURUMSAL ASIMETRIK/2200tl.jpg"
+              class="hidden w-full duration-300 md:block group-hover:opacity-50 hover:scale-105"
+          /></a>
+          <!-- Mobile Image -->
+          <a
+            class="hover:opacity-60 duration-300"
+            href="https://oim.akdeniznet.com.tr/login/index"
+            ><img
+              src="images/mobile/KURUMSAL ASIMETRIK/2200tl.jpg"
+              class="w-full md:hidden"
+          /></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- btn -->
+    <div class="flex justify-center mb-20">
+      <button
+        class="btn px-12 text-md md:text-3xl rounded-lg text-white duration-300 hover:bg-white hover:text-[#F37A04] bg-[#F37A04] md:block"
+      >
+        <a href="https://oim.akdeniznet.com.tr/login/index">hemen başvur</a>
+      </button>
+    </div>
+    <!------------------------------------------------------------------------------------>
+    <iframe
+      src="https://fast.com/"
+      frameborder="0"
+      id="hiz-testi"
+      class="container m-auto max-w-7xl h-96 md:h-[700px]"
+    ></iframe>
+
+    <!------------------------------------------------------------------------------------>
+
+    <!-- iletisim-container -->
+    <section id="iletisim">
+      <div class="h-screen w-full grid place-items-center">
+        <!-- Creations Header -->
+        <div class="flex justify-center">
+          <h2
+            class="text-4xl text-black text-center uppercase md:text-center md:text-5xl"
+          >
+            iletisim
+          </h2>
+        </div>
+        <div class="bg-white rounded-md shadow-md flex flex-row">
+          <!-- contact information form -->
+          <div class="bg-[#F37A04] p-8 rounded-md md:block" id="contact_info">
+            <div class="flex justify-between">
+              <h2 class="text-white font-semibold uppercase text-xl">
+                İletişim bilgileri
+              </h2>
+              <h2
+                class="text-white text-sm flex flex-row md:hidden cursor-pointer mt-2"
+                id="swtich_to_contact_us"
+              >
+                Bize Ulaşın  
+                <i class="fa-solid fa-arrow-right text-sm ml-2"></i>
+              </h2>
+            </div>
+            <div class="mt-6 flex flex-row">
+              <div>
+                <i
+                  class="fa-solid fa-user text-slate-200 mr-4 text-2xl mt-2"
+                ></i>
+              </div>
+              <div>
+                <h2 class="text-slate-200 font-semibold text-lg">Adı :</h2>
+                <p class="text-white text-lg">Hasan</p>
+              </div>
+            </div>
+            <div class="mt-4 flex flex-row">
+              <div>
+                <i class="fa-solid fa-at text-slate-200 mr-4 text-2xl mt-2"></i>
+              </div>
+              <div>
+                <h2 class="text-slate-200 font-semibold text-lg">E-Mail :</h2>
+                <p class="text-white text-lg">bilgi@akdeniznet.com</p>
+              </div>
+            </div>
+            <div class="mt-4 flex flex-row">
+              <div>
+                <i class="fa-solid fa-phone text-slate-200 mr-4 text-2xl"></i>
+              </div>
+              <div>
+                <h2 class="text-slate-200 font-semibold text-lg">Telefon :</h2>
+                <p class="text-white text-lg">0850 471 87 83</p>
+              </div>
+            </div>
+            <div class="mt-5 flex flex-row">
+              <div>
+                <i
+                  class="fa-solid fa-house text-slate-200 mr-4 text-2xl mt-8"
+                ></i>
+              </div>
+              <div>
+                <h2 class="text-slate-200 font-semibold text-lg">Adres :</h2>
+                <p class="text-white text-sm">
+                  Yalınayak Mahallesi Kanal Caddesi No:60AA Toroslar / MERSiN
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Bize Ulaşın form -->
+          <div class="px-6 py-8" id="contact_us">
+            <div class="flex justify-between">
+              <h2 class="text-[#F37A04] font-semibold text-2xl">Bize Ulaşın</h2>
+              <h2
+                class="text-[#F37A04] text-ms flex flex-row md:hidden cursor-pointer"
+                id="swtich_to_contact_info"
+              >
+                İletişim bilgileri
+                <i class="fa-solid fa-arrow-right text-sm ml-2 mt-[2px]"></i>
+              </h2>
+              
+            </div>
+            <form action="https://formsubmit.co/najeb1922@gmail.com" method="POST">
+              <input
+                required
+                type="text"
+                placeholder="Adınız Soyadınız"
+                class="w-full text-ms px-3 h-8 my-2 outline-none rounded-md border focus:shadow-sm"
+              />
+              <input
+                required
+                type="email"
+                placeholder="E-Postanız"
+                class="w-full text-ms px-3 h-8 my-2 outline-none rounded-md border focus:shadow-sm"
+              /><br />
+              <input
+                required
+                type="tel"
+                placeholder="Telefon Numaranız"
+                class="w-full text-ms px-3 h-8 my-2 outline-none rounded-md border focus:shadow-sm"
+              /><br />
+              <textarea
+                placeholder="Mesaj Giriniz"
+                class="w-full text-ms px-3 py-2 h-20 my-2 outline-none rounded-md border focus:shadow-sm resize-none"
+              ></textarea
+              ><br />
+              <input
+                required
+                type="submit"
+                value="Gönder"
+                class="bg-[#F37A04] px-6 py-3 border rounded-md text-white text-sm cursor-pointer duration-300 hover:shadow-xl hover:border-[#F37A04] hover:text-[#F37A04] hover:bg-white"
+              />
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- google maps section -->
+    <section>
+      <div class="opacity-80">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51097.47963668528!2d34.715178851367185!3d36.828284200000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1527f391f7a64a31%3A0xf285efe044581680!2sAkdeniz%20Net%20l%20Kablosuz%20Fiber%20%C4%B0nternet!5e0!3m2!1sar!2str!4v1692861863099!5m2!1sar!2str"
+          width="100%"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </section>
+    <!-------------------------------------------------------->
+    <div class="counter-wrapper">
+      <div class="counter">
+        <h1 class="count" data-target="65">65</h1>
+        <p>Verici Noktası</p>
+      </div>
+      <div class="counter">
+        <h1 class="count" data-target="8254">0</h1>
+        <p>Mutlu Müşteri</p>
+      </div>
+      <div class="counter">
+        <h1 class="count" data-target="8000">0</h1>
+        <p>Bireysel Abone</p>
+      </div>
+      <div class="counter">
+        <h1 class="count" data-target="254">0</h1>
+        <p>Kurumsal Abone</p>
+      </div>
+    </div>
+
+    <!---------------------------------------------------------------------------------->
+
+    <!-- footer section -->
+    <footer class="bg-slate-800">
+      <!-- Container -->
+      <div class="container max-w-7xl py-10 mx-auto">
+        <!-- Footer Flex Container -->
+        <div
+          class="flex flex-col items-center mb-8 space-y-6 md:flex-row md:space-y-0 md:justify-between md:items-start"
+        >
+          <!-- Menu & Logo Container -->
+          <div
+            class="flex flex-col items-center space-y-8 md:items-start md:space-y-4"
+          >
+            <!-- Logo -->
+            <div class="h-8">
+              <img src="images/akdeniz-net-logo.png" class="w-44 md:ml-3" />
+            </div>
+            <!-- Menu Container -->
+            <div
+              class="flex flex-col items-center space-y-1 font-bold text-white md:flex-row md:space-y-0 md:space-x-5 md:ml-3"
+            >
+              <!-- Item 1 -->
+              <div class="h-10 group font-alata">
+                <a class="nav" href="#">Anasayfa</a>
+              </div>
+              <!-- Item 2 -->
+              <div class="h-10 group font-alata">
+                <a class="nav" href="#">Hizmetlerimiz</a>
+              </div>
+              <!-- Item 3 -->
+              <div class="h-10 group font-alata">
+                <a class="nav" href="#Tarifelerimiz">Tarifelerimiz</a>
+              </div>
+              <!-- Item 4 -->
+              <div class="h-10 group font-alata">
+                <a class="nav" href="#iletisim">İletişim</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- social media & map Container -->
+          <div
+            class="flex flex-col items-start justify-between space-y-4 text-gray-500"
+          >
+            <div class="font-extrabold uppercase font-alata text-white">
+              çalışma saatleri :
+            </div>
+            <div class="font-semibold nav">Hafta İçi : 09:00 - 18:00</div>
+            <div class="font-semibold nav">Cumartesi : 09:00 - 18:00</div>
+            <div class="font-semibold nav">Pazar : Kapalı</div>
+          </div>
+          <!-- social media & map Container -->
+          <div
+            class="flex flex-col items-start justify-between space-y-4 text-gray-500"
+          >
+            <!-- icons Container -->
+            <div
+              class="flex items-center justify-center mx-auto space-x-3 md:justify-end md:mx-0"
+            >
+              <!-- Icon 1 -->
+              <div class="h-8 group">
+                <a
+                  class="facebook"
+                  target="_blank"
+                  href="https://www.facebook.com/akdeniznettelekom"
+                >
+                  <i class="fa-brands fa-square-facebook"></i>
+                </a>
+              </div>
+              <!-- Icon 2 -->
+              <div class="h-8 group">
+                <a
+                  class="insta-icon"
+                  target="_blank"
+                  href="https://instagram.com/akdeniz_net?igshid=MmU2YjMzNjRlOQ=="
+                >
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+              </div>
+              <!-- icon 3 -->
+              <div class="h-8 group">
+                <a
+                  class="youtube-icon"
+                  target="_blank"
+                  href="https://youtube.com/@AkdeniznetTelekom?si=puY0_yadVc6lKp-d"
+                >
+                  <i class="fa-brands fa-youtube"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- telefon no -->
+            <div class="font-bold">
+              <a class="telefon-icon" href="#">
+                <i class="fa-solid fa-phone"></i
+              ></a>
+
+              0850 471 87 83
+            </div>
+            <!-- map -->
+            <div class="font-bold">
+              <a class="map" href="#">
+                <i class="fa-solid fa-location-dot"></i
+              ></a>
+
+              Yalınayak Mahallesi Kanal<br />Caddesi no:60/aa Toroslar/mersin
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+  </body>
+</html>
