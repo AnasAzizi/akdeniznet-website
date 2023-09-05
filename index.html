@@ -83,7 +83,7 @@
             <a class="nav" href="#ikinci">Hizmetlerimiz</a>
           </div>
           <div class="group text-xl">
-            <a class="nav" href="#">Multimedia</a>
+            <a class="nav" href="#Multimedia">Multimedia</a>
           </div>
 
           <div class="group text-xl">
@@ -143,6 +143,7 @@
       >
         <a href="#" class="hover:text-[#F37A04]">Anasayfa</a>
         <a href="#ikinci" class="hover:text-[#F37A04]">Hizmetlerimiz</a>
+        <a href="#Multimedia" class="hover:text-[#F37A04]">Multimedia</a>
         <a href="#Tarifelerimiz" class="hover:text-[#F37A04]">Tarifelerimiz</a>
         <a href="#hiz-testi" class="hover:text-[#F37A04]">Hız testi</a>
         <a href="#iletisim" class="hover:text-[#F37A04]">İletişim</a>
@@ -854,13 +855,110 @@
       </button>
     </div>
     <!-------------------speed-test-section-start--------------------------->
+    <h2
+      id="hiz-testi"
+      class="text-4xl text-black font-bold text-center pt-5 uppercase md:text-center md:text-5xl"
+    >
+      Hız testi
+    </h2>
     <iframe
       src="https://fast.com/"
       frameborder="0"
       id="hiz-testi"
-      class="container m-auto max-w-7xl h-96 md:h-[700px]"
+      class="container m-auto max-w-7xl h-96 md:h-[700px] md:py-28"
     ></iframe>
     <!-------------------speed-test-section-end--------------------------->
+    <!---------------------- Multimedia-start ----------------------------->
+    <section class="relative">
+      <h2
+        id="Multimedia"
+        class="text-4xl text-black font-bold text-center pt-5 uppercase md:text-center md:text-5xl"
+      >
+        Multimedia
+      </h2>
+      <div
+        class="container flex flex-col overflow-hidden mx-auto space-x-6 px-6 py-4 space-y-5 md:flex-row md:space-y-0 max-w-7xl md:py-32"
+      >
+        <div class="md:w-1/2 relative">
+          <img
+            class="border rounded-[6px]"
+            src="images/desktop/arkaplan-5.jpg"
+          />
+          <img
+            class="absolute left-[280px] top-[165px] md:left-[540px] md:top-[340px] w-14 cursor-pointer"
+            src="images/video/play.png"
+            onclick="playVideo('images/video/1.mp4')"
+          />
+        </div>
+        <div
+          class="md:w-1/2 flex flex-col justify-center items-center space-y-2"
+        >
+          <!-- 1 -->
+          <div
+            class="flex relative flex-row items-center mx-0 overflow-hidden border rounded-[6px] bg-[#efefef]"
+          >
+            <img class="w-[150px]" src="images/video/pic4.png" />
+            <img
+              class="absolute left-[115px] top-[70px] md:top-[60px] w-8 cursor-pointer"
+              src="images/video/play.png"
+              onclick="playVideo('images/video/1.mp4')"
+            />
+
+            <p class="mx-5 text-[#707070] text-base">
+              Lorem ipsum dolor sit, amet consectetur <br />
+              adipisicing elit. Eius, id!
+            </p>
+          </div>
+          <!-- 2 -->
+          <div
+            class="flex relative flex-row items-center mx-0 overflow-hidden border rounded-[6px] bg-[#efefef]"
+          >
+            <img class="w-[150px]" src="images/video/pic4.png" />
+            <img
+              class="absolute left-[115px] top-[70px] md:top-[60px] w-8 cursor-pointer"
+              src="images/video/play.png"
+              onclick="playVideo('images/video/2.mp4')"
+            />
+
+            <p class="mx-5 text-[#707070] text-base">
+              Lorem ipsum dolor sit, amet consectetur <br />
+              adipisicing elit. Eius, id!
+            </p>
+          </div>
+          <!-- 3 -->
+          <div
+            class="flex relative flex-row items-center mx-0 overflow-hidden border rounded-[6px] bg-[#efefef]"
+          >
+            <img class="w-[150px]" src="images/video/pic4.png" />
+            <img
+              class="absolute left-[115px] top-[70px] md:top-[60px] w-8 cursor-pointer"
+              src="images/video/play.png"
+              onclick="playVideo('images/video/3.mp4')"
+            />
+
+            <p class="mx-5 text-[#707070] text-base">
+              Lorem ipsum dolor sit, amet consectetur <br />
+              adipisicing elit. Eius, id!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="videoPlayer"
+        class="max-w-7xl absolute border-2 border-black hidden top-[190px] md:top-[-100px] md:right-[290px]"
+      >
+        <video id="myVideo" controls class="w-[2000px]">
+          <source src="images/video/1.mp4" type="video/mp4" />
+        </video>
+        <img
+          onclick="stopVideo()"
+          class="absolute top-[10px] right-[10px] w-8 cursor-pointer"
+          src="images/video/close.png"
+        />
+      </div>
+    </section>
+    <!---------------------- Multimedia-end ------------------------------->
 
     <!-------------------iletisim-section-start--------------------------->
 
@@ -1024,7 +1122,7 @@
 
     <footer class="bg-slate-800">
       <!-- Container -->
-      <div class="container max-w-7xl py-10 mx-auto">
+      <div class="container  max-w-9xl py-10 mx-auto">
         <!-- Footer Flex Container -->
         <div
           class="flex flex-col items-center mb-8 space-y-6 md:flex-row md:space-y-0 md:justify-between md:items-start"
@@ -1054,11 +1152,28 @@
               <div class="h-10 group font-alata">
                 <a class="nav" href="#ikinci">Hizmetlerimiz</a>
               </div>
+
               <!-- Item 3 -->
+              <div class="h-10 group font-alata">
+                <a
+                  class="nav"
+                  href="#Multimedia
+                "
+                  >Multimedia
+                </a>
+              </div>
+
+              <!-- Item 4 -->
               <div class="h-10 group font-alata">
                 <a class="nav" href="#Tarifelerimiz">Tarifelerimiz</a>
               </div>
-              <!-- Item 4 -->
+
+              <!-- Item 5 -->
+              <div class="h-10 group font-alata">
+                <a class="nav" href="#hiz-testi">Hız testi </a>
+              </div>
+
+              <!-- Item 6 -->
               <div class="h-10 group font-alata">
                 <a class="nav" href="#iletisim">İletişim</a>
               </div>
@@ -1134,6 +1249,9 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="flex items-center justify-center py-2 bg-slate-900 w-full text-slate-300 ">
+      <p>© 2023 Enes | AkdenizNet</p>
       </div>
     </footer>
 
