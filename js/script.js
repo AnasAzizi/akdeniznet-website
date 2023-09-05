@@ -62,3 +62,19 @@ counts.forEach((counter) => {
     }
     upDate()
 })
+
+
+//video-container
+var videoPlayer = document.getElementById("videoPlayer");
+var myVideo = document.getElementById("myVideo");
+let count = 0;
+
+function playVideo(file){
+  myVideo.src =file;
+  videoPlayer.style.display="block";
+}
+
+function stopVideo(){
+
+  videoPlayer.style.display="none";
+}
