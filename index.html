@@ -875,15 +875,13 @@
       >
         Multimedia
       </h2>
+
       <div
         class="container flex flex-col max-w-7xl overflow-hidden mx-auto md:space-x-6 space-x-0 px-6 py-4 space-y-5 md:flex-row md:space-y-0 md:py-32"
       >
         <!-- 1 -->
         <div class="h-1/2 md:w-1/2 relative">
-          <img
-            class="border rounded-[6px]"
-            src="images/video/tham-1.jpg"
-          />
+          <img class="border rounded-[6px]" src="images/video/tham-1.jpg" />
           <img
             class="absolute left-[150px] top-[100px] md:left-[275px] md:top-[200px] w-10 md:w-14 cursor-pointer"
             src="images/video/play.png"
@@ -892,26 +890,20 @@
         </div>
         <!-- 2 -->
         <div class="h-1/2 md:w-1/2 relative">
-          <img
-            class="border rounded-[6px]"
-            src="images/video/tham-2.jpg"
-          />
+          <img class="border rounded-[6px]" src="images/video/tham-2.jpg" />
           <img
             class="absolute left-[150px] top-[100px] md:left-[275px] md:top-[200px] w-10 md:w-14 cursor-pointer"
             src="images/video/play.png"
             onclick="playVideo('images/video/3.mp4')"
           />
         </div>
-        
       </div>
 
       <div
         id="videoPlayer"
         class="max-w-7xl absolute border-2 border-black hidden top-[190px] md:top-[-100px] md:right-[290px]"
       >
-        <video id="myVideo" controls class="w-[2000px]">
-          <source src="images/video/1.mp4" type="video/mp4" />
-        </video>
+        <video id="myVideo" autoplay controls class="w-[2000px]"></video>
         <img
           onclick="stopVideo()"
           class="absolute top-[10px] right-[10px] w-8 cursor-pointer"
