@@ -67,7 +67,6 @@ counts.forEach((counter) => {
 //video-container
 var videoPlayer = document.getElementById("videoPlayer");
 var myVideo = document.getElementById("myVideo");
-let count = 0;
 
 function playVideo(file){
   myVideo.src =file;
@@ -75,6 +74,6 @@ function playVideo(file){
 }
 
 function stopVideo(){
-
   videoPlayer.style.display="none";
+  myVideo.pause(); 
 }
