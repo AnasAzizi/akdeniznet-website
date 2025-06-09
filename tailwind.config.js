@@ -1,5 +1,9 @@
 module.exports = {
-  content: ['./*.html'],
+  content: [
+    "./*.html",
+    "./js/**/*.js",
+    "./src/**/*.{html,js}"
+  ],
   theme: {
     screens: {
       sm: '480px',
@@ -11,7 +15,7 @@ module.exports = {
       fontFamily: {
         sans: ['Josefin Sans', 'sans-serif'],
         alata: ['Alata'],
-        Lobster:['Lobster']
+        Lobster: ['Lobster']
       },
       letterSpacing: {
         widest: '.3em',
