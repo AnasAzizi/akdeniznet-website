@@ -13,7 +13,7 @@ permissions:
 
 jobs:
   check:
-    name: Lint, typecheck, format, i18n, contrast, data, build
+    name: Checks, build and end-to-end tests
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
@@ -29,3 +29,13 @@ jobs:
       - run: npm run contrast:check
       - run: npm run data:check
       - run: npm run build
+      # Pages, WCAG 2.2 AA (axe), navigation, forms, motion modes and the
+      # speed test (simulated line) against the production build. Uses the
+      # runner's installed Google Chrome.
+      - run: npm run test:e2e
+      - uses: actions/upload-artifact@v7
+        if: failure()
+        with:
+          name: playwright-results
+          path: test-results/
+          retention-days: 7

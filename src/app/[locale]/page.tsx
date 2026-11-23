@@ -6,6 +6,7 @@ import { Highlights } from "@/components/home/highlights";
 import { HomeHero } from "@/components/home/home-hero";
 import { SegmentOverview } from "@/components/home/segment-overview";
 import { StatsBand } from "@/components/home/stats-band";
+import { LocalBusinessJsonLd } from "@/components/seo/local-business-json-ld";
 import { alternatesFor } from "@/lib/seo";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -20,6 +21,7 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function HomePage() {
   return (
     <>
+      <LocalBusinessJsonLd />
       <HomeHero />
       <SegmentOverview />
       <Highlights />

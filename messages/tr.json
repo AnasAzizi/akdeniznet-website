@@ -270,5 +270,11 @@
       "title": "Mersin'in yerel ağı",
       "body": "Mersin genelinde {sites, number} verici noktası, {subscribers, number} abone."
     }
+  },
+  "NotFound": {
+    "title": "Bu sayfa bulunamadı",
+    "description": "Aradığınız sayfa taşınmış ya da hiç var olmamış olabilir. Tarifelere ya da ana sayfaya göz atın.",
+    "plans": "Tarifeleri incele",
+    "home": "Ana sayfaya dön"
   }
 }

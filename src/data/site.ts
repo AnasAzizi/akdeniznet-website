@@ -3,9 +3,23 @@
  * messages/{tr,en}.json; this file holds only values that are the same in
  * every language. Contact details come from the original 2023 site.
  */
+/**
+ * The deployment's own origin, for canonical URLs, hreflang and the
+ * sitemap: NEXT_PUBLIC_SITE_URL when set, otherwise the URL Vercel assigns
+ * (the production domain, or this branch's preview), otherwise local.
+ */
+function siteUrl() {
+  if (process.env.NEXT_PUBLIC_SITE_URL) return process.env.NEXT_PUBLIC_SITE_URL;
+  const host =
+    process.env.VERCEL_ENV === "production"
+      ? process.env.VERCEL_PROJECT_PRODUCTION_URL
+      : (process.env.VERCEL_BRANCH_URL ?? process.env.VERCEL_URL);
+  return host ? `https://${host}` : "http://localhost:3000";
+}
+
 export const site = {
   name: "Akdeniznet",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
+  url: siteUrl(),
 
   /**
    * This build is a portfolio redesign, not Akdeniznet's official site.
@@ -40,7 +54,10 @@ export const site = {
   },
 
   /** Opening hours, 24-hour clock. Sunday is closed. */
-  hours: { weekdays: "09:00–18:00", saturday: "09:00–18:00" },
+  hours: {
+    weekdays: { opens: "09:00", closes: "18:00" },
+    saturday: { opens: "09:00", closes: "18:00" },
+  },
 
   /** Footer credit for the designer and developer of this redesign. */
   credit: { name: "Anas Azizi", url: "https://anasazizi.com" },
@@ -51,3 +68,14 @@ export const site = {
     youtube: "https://www.youtube.com/@AkdeniznetTelekom",
   },
 } as const;
+
+/** "09:00–18:00" for display. */
+export function formatHours({
+  opens,
+  closes,
+}: {
+  opens: string;
+  closes: string;
+}) {
+  return `${opens}–${closes}`;
+}

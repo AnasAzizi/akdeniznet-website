@@ -270,5 +270,11 @@
       "title": "Mersin's local network",
       "body": "{sites, number} transmitter sites and {subscribers, number} subscribers across Mersin."
     }
+  },
+  "NotFound": {
+    "title": "We couldn't find this page",
+    "description": "The page you're looking for may have moved, or never existed. Try the plans or the home page.",
+    "plans": "See plans",
+    "home": "Back to the home page"
   }
 }

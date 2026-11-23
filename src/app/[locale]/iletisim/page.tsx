@@ -14,7 +14,7 @@ import { MapEmbed } from "@/components/contact/map-embed";
 import { ClientMessages } from "@/components/forms/client-messages";
 import { ContactForm } from "@/components/forms/contact-form";
 import { PageIntro } from "@/components/layout/page-intro";
-import { site } from "@/data/site";
+import { formatHours, site } from "@/data/site";
 import { Link } from "@/i18n/navigation";
 import { alternatesFor } from "@/lib/seo";
 
@@ -135,9 +135,9 @@ export default async function ContactPage() {
               </h2>
               <dl className="mt-3 grid grid-cols-[auto_1fr] gap-x-6 gap-y-2 tabular-nums">
                 <dt className="text-muted-foreground">{tFooter("weekdays")}</dt>
-                <dd>{hours.weekdays}</dd>
+                <dd>{formatHours(hours.weekdays)}</dd>
                 <dt className="text-muted-foreground">{tFooter("saturday")}</dt>
-                <dd>{hours.saturday}</dd>
+                <dd>{formatHours(hours.saturday)}</dd>
                 <dt className="text-muted-foreground">{tFooter("sunday")}</dt>
                 <dd>{tFooter("closed")}</dd>
               </dl>

@@ -17,6 +17,8 @@
     "i18n:check": "node scripts/check-messages.mjs",
     "contrast:check": "node scripts/check-contrast.mjs",
     "data:check": "node --disable-warning=ExperimentalWarning scripts/check-data.mjs",
+    "test:e2e": "playwright test",
+    "e2e": "next build && playwright test",
     "check": "npm run lint && npm run typecheck && npm run format:check && npm run i18n:check && npm run contrast:check && npm run data:check"
   },
   "dependencies": {
@@ -35,6 +37,8 @@
     "zod": "^4.6.7"
   },
   "devDependencies": {
+    "@axe-core/playwright": "4.14.0",
+    "@playwright/test": "1.65.1",
     "@tailwindcss/turbopack": "4.3.3",
     "@types/node": "^20.19.43",
     "@types/react": "^19.3.0",

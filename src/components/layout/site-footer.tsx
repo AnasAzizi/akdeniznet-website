@@ -11,7 +11,7 @@ import type { ReactNode } from "react";
 import { Logo } from "@/components/brand/logo";
 import { CurrentYear } from "@/components/layout/current-year";
 import { navItems } from "@/components/layout/nav-items";
-import { site } from "@/data/site";
+import { formatHours, site } from "@/data/site";
 import { Link } from "@/i18n/navigation";
 
 // min-h-6: every link is at least a 24px touch target (WCAG 2.2, 2.5.8).
@@ -144,9 +144,9 @@ export async function SiteFooter() {
           </FooterHeading>
           <dl className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-2 tabular-nums">
             <dt className="text-inverse-muted">{t("weekdays")}</dt>
-            <dd>{hours.weekdays}</dd>
+            <dd>{formatHours(hours.weekdays)}</dd>
             <dt className="text-inverse-muted">{t("saturday")}</dt>
-            <dd>{hours.saturday}</dd>
+            <dd>{formatHours(hours.saturday)}</dd>
             <dt className="text-inverse-muted">{t("sunday")}</dt>
             <dd>{t("closed")}</dd>
           </dl>

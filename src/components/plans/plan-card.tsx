@@ -87,10 +87,10 @@ export async function PlanCard({ plan }: { plan: Plan }) {
 
       <Link
         href={{ pathname: "/basvuru", query: { plan: plan.id } }}
+        aria-label={`${t("apply")}: ${labels.full(plan)}`}
         className={cn(buttonVariants(), "mt-auto w-full")}
       >
         {t("apply")}
-        <span className="sr-only">: {labels.full(plan)}</span>
       </Link>
     </article>
   );

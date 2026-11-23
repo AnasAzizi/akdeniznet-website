@@ -2,12 +2,13 @@
 
 Portfolio rebuild of **Akdeniznet**, an internet provider for homes and businesses in Mersin (Turkey), originally built in 2023 as a freelance project. **Audience:** Akdeniznet's customers (Turkish, many on phones); the case study speaks to employers. **Locales:** `tr` (default, unprefixed), `en` (`/en`). **Feel:** clear, local, trustworthy; brand blue with one orange call to action.
 
-The roadmap: Phase 0 baseline (done) → 1 foundation (done) → 2 plan data model (done) → 3 pages (done) → 4 motion (done) → 5 quality → 6 ship and case study. The "before" measurements are in `docs/case-study/baseline/README.md`; keep the "after" measurements comparable (same tools and settings).
+The roadmap: Phase 0 baseline (done) → 1 foundation (done) → 2 plan data model (done) → 3 pages (done) → 4 motion (done) → 5 quality (done) → 6 ship and case study. The "before" measurements are in `docs/case-study/baseline/README.md`; keep the "after" measurements comparable (same tools and settings).
 
 ## Workflow
 
 - Work on the **`v2`** branch. `main` holds v1, which is still deployed; never push to `main` or rewrite pushed history.
 - Before calling a task done, run `npm run check` and `npm run build`; all must pass. `next build` and `next dev` share `.next/`: stop the dev server before a build (or restart it afterwards). If a `globals.css` change doesn't show up in dev, restart the dev server (the Tailwind loader can miss it).
+- End-to-end tests: `npm run e2e` (build + Playwright) or `npm run test:e2e` against an existing build. Add a test with every user-facing feature; accessibility scans (axe, WCAG 2.2 AA) cover every page in both languages.
 - Use Conventional Commits (`feat:`, `fix:`, `docs:`, `chore:`, `refactor:`). Commit or push only when asked.
 - Explain important technical decisions briefly, and push back when a better option exists.
 
@@ -22,7 +23,8 @@ The roadmap: Phase 0 baseline (done) → 1 foundation (done) → 2 plan data mod
 ## Internationalization
 
 - All user-facing text goes in `messages/{tr,en}.json`; add each key to both files (`npm run i18n:check`). Turkish is the source language. Locale-independent facts (phone, address, hours, URLs) live in `src/data/site.ts`.
-- New pages: add the pathname to `src/i18n/routing.ts` with its English slug, and link with `Link` from `@/i18n/navigation`.
+- New pages: add the pathname to `src/i18n/routing.ts` with its English slug, add it to `src/app/sitemap.ts` and `tests/routes.ts`, and link with `Link` from `@/i18n/navigation`.
+- The language switch is a plain `<a>` to the locale-prefixed URL (a full page load). A client-side navigation would keep the other language's page mounted but hidden (Cache Components keeps visited routes in the DOM), duplicating IDs such as `#main`. In tests, match labels exactly: hidden visited pages are still in the DOM.
 - Use logical CSS only (`ms-* me-* ps-* pe-* start-* end-*`), so Arabic (RTL) can be added later.
 - Turkish casing: `lang` is set per locale so `uppercase` turns `i` into `İ`; never uppercase strings in JavaScript.
 

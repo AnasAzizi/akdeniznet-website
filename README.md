@@ -38,8 +38,12 @@ Copy `.env.example` to `.env.local` and set `NEXT_PUBLIC_SITE_URL` for productio
 | `npm run contrast:check`          | Every color pair the design uses meets WCAG 2.2 AA         |
 | `npm run data:check`              | Validates the plan data and renders it in every language   |
 | `npm run check`                   | All of the checks above except the build                   |
+| `npm run e2e`                     | Production build, then the Playwright suite                |
+| `npm run test:e2e`                | Playwright suite against an existing build                 |
 
-CI runs all of them, plus the build, on every push and pull request.
+CI runs all of them, the build and the end-to-end suite on every push and pull request.
+
+The end-to-end suite (`tests/`) runs in the installed Google Chrome against the production build, at desktop and phone sizes. It covers every page in both languages, WCAG 2.2 AA with axe, keyboard and menu navigation, both forms, motion with normal motion, reduced motion and JavaScript off, and the speed test on a simulated 40/20 Mbps line (no real traffic). Stop `npm run dev` first: the build and the dev server share `.next/`.
 
 ## Structure
 
@@ -56,4 +60,5 @@ src/data/                 Locale-independent facts: plans (Zod-validated), stats
 src/i18n/                 Locales, localized pathnames, navigation helpers
 src/lib/motion-runtime.ts All GSAP code, imported lazily
 src/proxy.ts              Locale routing (Next 16's renamed middleware)
+tests/                    Playwright end-to-end and accessibility tests
 ```
