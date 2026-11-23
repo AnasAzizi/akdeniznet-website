@@ -2,12 +2,12 @@
 
 Portfolio rebuild of **Akdeniznet**, an internet provider for homes and businesses in Mersin (Turkey), originally built in 2023 as a freelance project. **Audience:** Akdeniznet's customers (Turkish, many on phones); the case study speaks to employers. **Locales:** `tr` (default, unprefixed), `en` (`/en`). **Feel:** clear, local, trustworthy; brand blue with one orange call to action.
 
-The roadmap: Phase 0 baseline (done) → 1 foundation (done) → 2 plan data model (done) → 3 pages (done) → 4 motion → 5 quality → 6 ship and case study. The "before" measurements are in `docs/case-study/baseline/README.md`; keep the "after" measurements comparable (same tools and settings).
+The roadmap: Phase 0 baseline (done) → 1 foundation (done) → 2 plan data model (done) → 3 pages (done) → 4 motion (done) → 5 quality → 6 ship and case study. The "before" measurements are in `docs/case-study/baseline/README.md`; keep the "after" measurements comparable (same tools and settings).
 
 ## Workflow
 
 - Work on the **`v2`** branch. `main` holds v1, which is still deployed; never push to `main` or rewrite pushed history.
-- Before calling a task done, run `npm run check` and `npm run build`; all must pass. `next build` and `next dev` share `.next/`: stop the dev server before a build (or restart it afterwards).
+- Before calling a task done, run `npm run check` and `npm run build`; all must pass. `next build` and `next dev` share `.next/`: stop the dev server before a build (or restart it afterwards). If a `globals.css` change doesn't show up in dev, restart the dev server (the Tailwind loader can miss it).
 - Use Conventional Commits (`feat:`, `fix:`, `docs:`, `chore:`, `refactor:`). Commit or push only when asked.
 - Explain important technical decisions briefly, and push back when a better option exists.
 
@@ -38,7 +38,9 @@ The roadmap: Phase 0 baseline (done) → 1 foundation (done) → 2 plan data mod
 
 ## Motion
 
-- GSAP never loads before first paint: all JS motion lives in `src/lib/motion-runtime.ts`, imported lazily by `MotionProvider`, and never under reduced motion. Server Components only emit data attributes (`Reveal` → `[data-reveal]`).
+- GSAP never loads before first paint: all JS motion lives in `src/lib/motion-runtime.ts`, imported lazily by `MotionProvider`, and never under reduced motion. Server Components only emit data attributes: `Reveal` → `[data-reveal]`, `[data-count-to]` (counters; pair with an `sr-only` final value), `[data-bar]` (scaleX bars). Use them only below the fold.
+- Above-the-fold motion (the home hero and signal graphic) is pure CSS keyframes in `globals.css` (`[data-intro]`, `.signal-graphic`): it plays with the first paint, once, and never under reduced motion. The LCP headline blurs in at full opacity; never start it at `opacity: 0`.
+- Background browser tabs pause animation frames and scroll events, so GSAP can't be tested in a hidden tab: check motion in a foreground tab or headless Chrome.
 - Animate only `transform`, `opacity` and `filter`. No scroll hijacking or long pinned scenes.
 - Content must never stay hidden if JavaScript fails (`motion-ok` is removed after 4 s without `motion-ready`).
 

@@ -55,7 +55,7 @@ export async function SpeedExplainer() {
                   ["download", plan.downloadMbps, "bg-primary"],
                   ["upload", plan.uploadMbps ?? 0, "bg-cta"],
                 ] as const
-              ).map(([key, value, color]) => (
+              ).map(([key, value, color], index) => (
                 <div
                   key={key}
                   className="grid grid-cols-[5.5rem_1fr_auto] items-center gap-3 text-sm"
@@ -64,6 +64,7 @@ export async function SpeedExplainer() {
                   <dd className="h-3 overflow-hidden rounded-full bg-muted">
                     <span
                       data-bar=""
+                      data-bar-delay={index * 0.15}
                       className={`block h-full origin-left rounded-full rtl:origin-right ${color}`}
                       style={{ transform: `scaleX(${value / max})` }}
                     />

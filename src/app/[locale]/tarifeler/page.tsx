@@ -32,8 +32,8 @@ export default async function PlansPage() {
       </PageIntro>
       <SegmentNav />
       <div className="container-page flex flex-col gap-section py-16 md:py-20">
-        {segments.map((segment) => (
-          <SegmentSection key={segment} segment={segment} />
+        {segments.map((segment, index) => (
+          <SegmentSection key={segment} segment={segment} reveal={index > 0} />
         ))}
         <PlansTable />
         <SpeedExplainer />

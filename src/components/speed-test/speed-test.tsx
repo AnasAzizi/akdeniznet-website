@@ -14,6 +14,7 @@ import { useEffect, useRef, useState } from "react";
 
 import { MEASUREMENTS } from "@/components/speed-test/measurements";
 import { SpeedGauge } from "@/components/speed-test/speed-gauge";
+import { useTweenedNumber } from "@/components/speed-test/use-tweened-number";
 import { Button } from "@/components/ui/button";
 
 type Phase = "idle" | "latency" | "download" | "upload" | "done" | "error";
@@ -103,7 +104,10 @@ export function SpeedTest() {
     phase === "latency" || phase === "download" || phase === "upload";
   // The dial follows what is being measured; afterwards it shows the download.
   const direction = phase === "upload" ? "upload" : "download";
-  const gaugeValue = direction === "upload" ? results.upload : results.download;
+  // Eased between result updates, so the dial and number glide.
+  const gaugeValue = useTweenedNumber(
+    direction === "upload" ? results.upload : results.download,
+  );
   const number = (value: number | undefined, digits = 1) =>
     value === undefined
       ? "–"

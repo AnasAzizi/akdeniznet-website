@@ -7,6 +7,7 @@ import {
 } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 
+import { Reveal } from "@/components/motion/reveal";
 import { highlights } from "@/data/highlights";
 import { stats, totalSubscribers } from "@/data/stats";
 
@@ -31,7 +32,11 @@ export async function Highlights() {
         <h2 id="highlights-heading" className="text-h2">
           {tHome("highlightsTitle")}
         </h2>
-        <ul className="mt-10 grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
+        <Reveal
+          as="ul"
+          stagger={0.08}
+          className="mt-10 grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-4"
+        >
           {highlights.map(({ key, icon }) => {
             const Icon = icons[icon];
             return (
@@ -51,7 +56,7 @@ export async function Highlights() {
               </li>
             );
           })}
-        </ul>
+        </Reveal>
       </div>
     </section>
   );

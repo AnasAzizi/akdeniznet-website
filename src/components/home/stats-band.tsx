@@ -34,11 +34,12 @@ export async function StatsBand() {
               className="flex flex-col-reverse gap-2 border-t border-inverse-foreground/15 pt-6"
             >
               <dt className="text-inverse-muted">{label}</dt>
-              <dd
-                className="text-display text-cta tabular-nums"
-                data-count-to={value}
-              >
-                {format.number(value)}
+              <dd className="text-display text-cta tabular-nums">
+                {/* The animated copy is hidden from screen readers, which get the final number. */}
+                <span aria-hidden data-count-to={value}>
+                  {format.number(value)}
+                </span>
+                <span className="sr-only">{format.number(value)}</span>
               </dd>
             </div>
           ))}

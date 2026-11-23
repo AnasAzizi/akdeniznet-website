@@ -6,6 +6,7 @@ import {
 } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 
+import { Reveal } from "@/components/motion/reveal";
 import { buttonVariants } from "@/components/ui/button";
 import { site } from "@/data/site";
 import { Link } from "@/i18n/navigation";
@@ -20,7 +21,7 @@ export async function SpeedTeaser() {
       aria-labelledby="speed-heading"
       className="container-page py-section"
     >
-      <div className="flex flex-col items-start gap-6 rounded-3xl bg-secondary p-8 md:flex-row md:items-center md:justify-between md:p-12">
+      <Reveal className="flex flex-col items-start gap-6 rounded-3xl bg-secondary p-8 md:flex-row md:items-center md:justify-between md:p-12">
         <div className="flex items-start gap-5">
           <GaugeIcon
             aria-hidden
@@ -43,7 +44,7 @@ export async function SpeedTeaser() {
           {t("speedCta")}
           <ArrowRightIcon aria-hidden className="rtl:-scale-x-100" />
         </Link>
-      </div>
+      </Reveal>
     </section>
   );
 }
@@ -58,7 +59,7 @@ export async function ContactCta() {
       aria-labelledby="contact-cta-heading"
       className="container-page pb-section"
     >
-      <div className="grid gap-8 border-t pt-section lg:grid-cols-[1fr_auto] lg:items-end">
+      <Reveal className="grid gap-8 border-t pt-section lg:grid-cols-[1fr_auto] lg:items-end">
         <div>
           <h2 id="contact-cta-heading" className="text-h1">
             {t("contactTitle")}
@@ -93,7 +94,7 @@ export async function ContactCta() {
             <ArrowRightIcon aria-hidden className="rtl:-scale-x-100" />
           </Link>
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 }

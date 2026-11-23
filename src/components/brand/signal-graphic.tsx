@@ -1,24 +1,33 @@
+import type { CSSProperties } from "react";
+
 import { cn } from "@/lib/utils";
+
+/** Index for staggered CSS animation delays (`--i` in globals.css). */
+const order = (index: number) => ({ "--i": index }) as CSSProperties;
 
 /**
  * The brand's signal motif (the waves above the "i" in the logo): a
  * transmitter sending waves out over a field of sites. Decorative only.
- * Waves and sites carry data attributes so the motion runtime can animate
- * them later; without it, they are simply drawn.
+ *
+ * Its intro is pure CSS (see "Signal graphic" in globals.css), so it plays
+ * with the first paint and needs no JavaScript: waves spread from the
+ * tower, then each site appears and pings once. It plays once and stops,
+ * and not at all under reduced motion; without animation it is simply drawn.
  */
 export function SignalGraphic({ className }: { className?: string }) {
   const waves = [70, 120, 170, 220];
-  // Points standing in for transmitter sites (illustrative positions).
+  // Points standing in for transmitter sites (illustrative positions),
+  // listed roughly nearest-first so they light up outward from the tower.
   const sites = [
-    [90, 150],
-    [330, 120],
-    [60, 300],
-    [372, 270],
-    [150, 70],
-    [262, 52],
+    [212, 128],
     [120, 220],
     [300, 210],
-    [212, 128],
+    [90, 150],
+    [330, 120],
+    [150, 70],
+    [262, 52],
+    [60, 300],
+    [372, 270],
   ];
 
   return (
@@ -26,7 +35,7 @@ export function SignalGraphic({ className }: { className?: string }) {
       viewBox="0 0 440 400"
       aria-hidden
       focusable="false"
-      className={cn("h-auto w-full", className)}
+      className={cn("signal-graphic h-auto w-full", className)}
     >
       {/* The ground the waves rise from; stays inside the viewBox so nothing clips. */}
       <ellipse cx="220" cy="342" rx="216" ry="40" fill="var(--color-sea-100)" />
@@ -34,7 +43,8 @@ export function SignalGraphic({ className }: { className?: string }) {
       {waves.map((radius, index) => (
         <path
           key={radius}
-          data-signal-wave={index}
+          data-signal-wave=""
+          style={order(index)}
           d={`M ${220 - radius} 340 A ${radius} ${radius} 0 0 1 ${220 + radius} 340`}
           fill="none"
           stroke="var(--color-sea-600)"
@@ -44,8 +54,19 @@ export function SignalGraphic({ className }: { className?: string }) {
         />
       ))}
 
-      {sites.map(([x, y]) => (
-        <g key={`${x}-${y}`} data-signal-site="">
+      {sites.map(([x, y], index) => (
+        <g key={`${x}-${y}`} data-signal-site="" style={order(index)}>
+          {/* Expanding ring, visible only while animating. */}
+          <circle
+            data-signal-ping=""
+            cx={x}
+            cy={y}
+            r="6"
+            fill="none"
+            stroke="var(--color-sun-500)"
+            strokeWidth="2"
+            opacity="0"
+          />
           <circle
             cx={x}
             cy={y}

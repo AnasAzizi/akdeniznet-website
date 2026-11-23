@@ -56,7 +56,6 @@ export function SpeedGauge({
           strokeLinecap="round"
           strokeDasharray="100"
           strokeDashoffset={100 - position * 100}
-          className="motion-safe:transition-[stroke-dashoffset] motion-safe:duration-700 motion-safe:ease-out"
         />
         {TICKS.map((tick) => {
           const angle = Math.PI * (1 - gaugePosition(tick));
