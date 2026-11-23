@@ -1,0 +1,6 @@
+.next
+node_modules
+package-lock.json
+next-env.d.ts
+# Generated Lighthouse reports (kept byte-for-byte as recorded).
+docs/case-study/**/lighthouse

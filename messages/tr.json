@@ -1,0 +1,62 @@
+{
+  "Metadata": {
+    "title": "Akdeniznet | Mersin'de ev ve iş yeri interneti",
+    "description": "Mersin'de ev ve iş yerleri için taahhütsüz internet. Tarifeleri karşılaştırın, hızınızı test edin, dakikalar içinde başvurun."
+  },
+  "Common": {
+    "skipToContent": "İçeriğe geç",
+    "opensInNewTab": "(yeni sekmede açılır)"
+  },
+  "DemoBanner": {
+    "text": "Bu site bir portfolyo yeniden tasarımıdır.",
+    "official": "Resmî site: akdeniznet.com.tr"
+  },
+  "Nav": {
+    "label": "Ana menü",
+    "home": "Ana sayfa",
+    "plans": "Tarifeler",
+    "speedTest": "Hız testi",
+    "contact": "İletişim",
+    "portal": "Online İşlemler",
+    "menuTitle": "Menü",
+    "openMenu": "Menüyü aç",
+    "closeMenu": "Menüyü kapat",
+    "switchLocale": "Switch to English",
+    "localeName": "English"
+  },
+  "Footer": {
+    "tagline": "Mersin'de ev ve iş yerleri için internet.",
+    "explore": "Keşfet",
+    "contact": "İletişim",
+    "hours": "Çalışma saatleri",
+    "weekdays": "Hafta içi",
+    "saturday": "Cumartesi",
+    "sunday": "Pazar",
+    "closed": "Kapalı",
+    "phone": "Telefon",
+    "whatsapp": "WhatsApp",
+    "email": "E-posta",
+    "address": "Adres",
+    "follow": "Bizi takip edin",
+    "rights": "Akdeniznet. Tüm hakları saklıdır.",
+    "credit": "Tasarım ve geliştirme:"
+  },
+  "Home": {
+    "title": "Mersin'in interneti, taahhütsüz.",
+    "lead": "Ev ve iş yerleri için kablosuz ve fiber internet. Tarifenizi seçin, hızınızı test edin, gerisini bize bırakın.",
+    "ctaPlans": "Tarifeleri incele",
+    "ctaSpeedTest": "Hız testi yap"
+  },
+  "PlansPage": {
+    "title": "Tarifeler",
+    "lead": "Ev, simetrik ve asimetrik kurumsal tarifeleri yan yana karşılaştırın."
+  },
+  "SpeedTestPage": {
+    "title": "Hız testi",
+    "lead": "Bağlantınızın indirme, yükleme ve gecikme değerlerini ölçün."
+  },
+  "ContactPage": {
+    "title": "İletişim",
+    "lead": "Sorularınız için bize telefonla, WhatsApp'tan ya da e-postayla ulaşın."
+  }
+}

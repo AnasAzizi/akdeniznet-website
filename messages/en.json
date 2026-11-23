@@ -1,0 +1,62 @@
+{
+  "Metadata": {
+    "title": "Akdeniznet | Home and business internet in Mersin",
+    "description": "No-commitment internet for homes and businesses in Mersin. Compare plans, test your speed and apply in minutes."
+  },
+  "Common": {
+    "skipToContent": "Skip to content",
+    "opensInNewTab": "(opens in a new tab)"
+  },
+  "DemoBanner": {
+    "text": "This site is a portfolio redesign.",
+    "official": "Official site: akdeniznet.com.tr"
+  },
+  "Nav": {
+    "label": "Main menu",
+    "home": "Home",
+    "plans": "Plans",
+    "speedTest": "Speed test",
+    "contact": "Contact",
+    "portal": "Customer portal",
+    "menuTitle": "Menu",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "switchLocale": "Türkçe'ye geç",
+    "localeName": "Türkçe"
+  },
+  "Footer": {
+    "tagline": "Internet for homes and businesses in Mersin.",
+    "explore": "Explore",
+    "contact": "Contact",
+    "hours": "Opening hours",
+    "weekdays": "Weekdays",
+    "saturday": "Saturday",
+    "sunday": "Sunday",
+    "closed": "Closed",
+    "phone": "Phone",
+    "whatsapp": "WhatsApp",
+    "email": "Email",
+    "address": "Address",
+    "follow": "Follow us",
+    "rights": "Akdeniznet. All rights reserved.",
+    "credit": "Design and development:"
+  },
+  "Home": {
+    "title": "Mersin's internet, no commitment.",
+    "lead": "Wireless and fiber internet for homes and businesses. Pick a plan, test your speed, and leave the rest to us.",
+    "ctaPlans": "Compare plans",
+    "ctaSpeedTest": "Test your speed"
+  },
+  "PlansPage": {
+    "title": "Plans",
+    "lead": "Compare home, symmetric business and asymmetric business plans side by side."
+  },
+  "SpeedTestPage": {
+    "title": "Speed test",
+    "lead": "Measure your connection's download, upload and latency."
+  },
+  "ContactPage": {
+    "title": "Contact",
+    "lead": "Reach us by phone, WhatsApp or email."
+  }
+}
