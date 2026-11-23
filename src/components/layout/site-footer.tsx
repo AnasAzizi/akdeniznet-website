@@ -154,7 +154,7 @@ export async function SiteFooter() {
       </div>
 
       <div className="border-t border-inverse-foreground/15">
-        <div className="container-page flex flex-col gap-2 py-6 text-sm text-inverse-muted sm:flex-row sm:items-center sm:justify-between">
+        <div className="container-page flex flex-col gap-2 pt-6 pb-24 text-sm text-inverse-muted sm:flex-row sm:items-center sm:justify-between sm:pe-40 sm:pb-6 md:pe-44">
           <p>
             © <CurrentYear /> {t("rights")}
           </p>

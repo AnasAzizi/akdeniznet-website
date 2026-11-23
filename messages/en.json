@@ -5,7 +5,8 @@
   },
   "Common": {
     "skipToContent": "Skip to content",
-    "opensInNewTab": "(opens in a new tab)"
+    "opensInNewTab": "(opens in a new tab)",
+    "whatsapp": "Message us on WhatsApp"
   },
   "DemoBanner": {
     "text": "This site is a portfolio redesign.",
@@ -45,7 +46,20 @@
     "title": "Mersin's internet, no commitment.",
     "lead": "No-commitment internet for homes and businesses in Mersin. Pick a plan, test your speed, and leave the rest to us.",
     "ctaPlans": "Compare plans",
-    "ctaSpeedTest": "Test your speed"
+    "ctaSpeedTest": "Test your speed",
+    "eyebrow": "Mersin · {sites, number} transmitter sites",
+    "segmentsTitle": "Choose the right internet",
+    "segmentsLead": "For your home or your business. Every plan is contract-free.",
+    "segmentCta": "See plans",
+    "highlightsTitle": "Why Akdeniznet?",
+    "statsTitle": "Akdeniznet in numbers",
+    "speedTitle": "How fast is your internet?",
+    "speedLead": "Measure your connection's download, upload and latency.",
+    "speedCta": "Go to the speed test",
+    "contactTitle": "Questions?",
+    "contactLead": "Call us or message us on WhatsApp, and we'll pick the right plan together.",
+    "contactApply": "Apply online",
+    "callUs": "Call us"
   },
   "PlansPage": {
     "title": "Plans",
@@ -57,7 +71,126 @@
   },
   "ContactPage": {
     "title": "Contact",
-    "lead": "Reach us by phone, WhatsApp or email."
+    "lead": "Reach us by phone, WhatsApp or email.",
+    "call": "Call",
+    "write": "WhatsApp",
+    "email": "Email",
+    "visit": "Our office",
+    "directions": "Get directions",
+    "mapTitle": "Map of the Akdeniznet office",
+    "loadMap": "Show the map",
+    "mapNotice": "The map loads from Google Maps.",
+    "formTitle": "Write to us",
+    "formLead": "Leave a message and we'll get back to you.",
+    "newCustomer": "Want to become a subscriber?",
+    "newCustomerLink": "Online application form"
+  },
+  "ApplyPage": {
+    "title": "Apply online",
+    "lead": "Fill in the form and we'll contact you about your application.",
+    "selectedPlan": "Your plan",
+    "help": "Not sure which plan to choose?",
+    "helpLink": "Compare plans"
+  },
+  "Forms": {
+    "fields": {
+      "plan": "Plan",
+      "planPlaceholder": "Choose a plan",
+      "fullName": "Full name",
+      "phone": "Phone",
+      "email": "Email",
+      "address": "Installation address",
+      "note": "Note",
+      "message": "Your message"
+    },
+    "hints": {
+      "phone": "e.g. 0532 123 45 67",
+      "address": "Neighbourhood, street, building and flat number, district",
+      "contactMethod": "Give a phone number, an email address, or both."
+    },
+    "optional": "optional",
+    "errors": {
+      "required": "This field is required.",
+      "fullName": "Please enter your full name.",
+      "phone": "Enter a valid phone number (e.g. 0532 123 45 67).",
+      "email": "Enter a valid email address.",
+      "plan": "Please choose a plan.",
+      "address": "Please enter the installation address.",
+      "message": "Please write your message.",
+      "contactMethod": "Give a phone number, an email address, or both.",
+      "consent": "Please give your consent to continue.",
+      "tooLong": "This field is too long.",
+      "summary": "{count, plural, one {# field needs} other {# fields need}} fixing.",
+      "server": "Something went wrong. Please try again or call us."
+    },
+    "submitting": "Sending…",
+    "demoNotice": "This site is a portfolio demo: your form was not sent to Akdeniznet. For real applications and questions, call {phone}."
+  },
+  "ApplyForm": {
+    "consent": "I agree to be contacted by phone about my application.",
+    "submit": "Send application",
+    "successTitle": "Application received",
+    "successBody": "Thank you, {name}. We'll call you about your {plan} application.",
+    "another": "Start a new application"
+  },
+  "ContactForm": {
+    "submit": "Send message",
+    "successTitle": "Message received",
+    "successBody": "Thank you, {name}. We'll get back to you as soon as possible.",
+    "another": "Write another message"
+  },
+  "SpeedTest": {
+    "start": "Start the test",
+    "restart": "Test again",
+    "idle": "Start the test when you're ready.",
+    "phases": {
+      "latency": "Measuring latency…",
+      "download": "Measuring download speed…",
+      "upload": "Measuring upload speed…"
+    },
+    "done": "Test complete",
+    "download": "Download",
+    "upload": "Upload",
+    "latency": "Latency",
+    "jitter": "Jitter",
+    "mbps": "Mbps",
+    "ms": "ms",
+    "gaugeLabel": "{direction, select, download {Current download speed} upload {Current upload speed} other {Current speed}}",
+    "dataUsed": "This test used about {mb, number} MB of data.",
+    "dataWarning": "The test uses at most about {maxMb, number} MB of data, and much less on slow connections. Take care on mobile data.",
+    "privacy": "The test uses Cloudflare's open-source speed test. Cloudflare records the results for aggregate statistics.",
+    "error": "The test couldn't finish. Check your connection and try again.",
+    "suggestion": "Need faster internet?",
+    "suggestionCta": "Compare plans"
+  },
+  "Faq": {
+    "title": "Frequently asked questions",
+    "items": {
+      "commitment": {
+        "q": "Is there a minimum contract?",
+        "a": "No. Every plan is contract-free."
+      },
+      "phoneLine": {
+        "q": "Do I need a landline for home internet?",
+        "a": "No. Home plans don't need a landline."
+      },
+      "symmetric": {
+        "q": "What is symmetric internet?",
+        "a": "A connection with the same upload and download speed. With Metro 20, for example, you get 20 Mbps in both directions."
+      },
+      "akn": {
+        "q": "What is AKN?",
+        "a": "The fair-usage threshold (\"adil kullanım kotası\"): a limit that slows your connection after a certain amount of use. Business plans have no AKN."
+      },
+      "faults": {
+        "q": "What do I do if something stops working?",
+        "a": "Report the fault online and we fix it within 24 hours."
+      },
+      "modem": {
+        "q": "Will a modem fee appear on my bill later?",
+        "a": "No. We never advertise a \"free modem\" and then add a modem fee to your bill."
+      }
+    }
   },
   "Plans": {
     "segments": {
@@ -91,6 +224,24 @@
     "symmetric": "Symmetric",
     "asymmetric": "Asymmetric",
     "pricePerMonth": "{price, number, price}/mo",
+    "perMonth": "/mo",
+    "monthlyPrice": "Monthly price",
+    "apply": "Apply",
+    "segmentNav": "Plan types",
+    "compareTitle": "Every plan in one table",
+    "compareSummary": "Show the table",
+    "table": {
+      "plan": "Plan",
+      "type": "Type",
+      "price": "Monthly price",
+      "notStated": "Not stated"
+    },
+    "explainer": {
+      "title": "Symmetric or asymmetric?",
+      "lead": "The difference is the upload speed.",
+      "symmetricBody": "The same speed up and down. Choose symmetric if you send a lot of data out: video meetings, camera recordings, servers or large files.",
+      "asymmetricBody": "Upload is slower than download. A lower-cost choice for offices that mostly use email, the web and cloud apps."
+    },
     "priceOnRequest": "Call for a price",
     "startingFrom": "From {price, number, price}",
     "pricesAsOf": "Prices are from the {asOf, date, monthYear} price list; current prices may differ."

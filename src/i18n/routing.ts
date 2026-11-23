@@ -14,6 +14,7 @@ export const routing = defineRouting({
     "/tarifeler": { tr: "/tarifeler", en: "/plans" },
     "/hiz-testi": { tr: "/hiz-testi", en: "/speed-test" },
     "/iletisim": { tr: "/iletisim", en: "/contact" },
+    "/basvuru": { tr: "/basvuru", en: "/apply" },
   },
 });
 

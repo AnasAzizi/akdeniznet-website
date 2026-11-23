@@ -7,6 +7,7 @@ import { DemoBanner } from "@/components/layout/demo-banner";
 import { InitScript } from "@/components/layout/init-script";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
+import { WhatsAppButton } from "@/components/layout/whatsapp-button";
 import { MotionProvider } from "@/components/motion/motion-provider";
 import { site } from "@/data/site";
 import { getDirection, routing } from "@/i18n/routing";
@@ -88,6 +89,7 @@ export default async function LocaleLayout({
             {children}
           </main>
           <SiteFooter />
+          <WhatsAppButton />
         </NextIntlClientProvider>
       </body>
     </html>

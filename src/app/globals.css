@@ -102,7 +102,7 @@
  * Brand scales, for illustrations and the rare case no semantic token fits.
  * Components should use the semantic tokens above.
  */
-@theme {
+@theme static {
   --color-sea-50: #eef7fc;
   --color-sea-100: #d7ecf8;
   --color-sea-200: #afd9f1;

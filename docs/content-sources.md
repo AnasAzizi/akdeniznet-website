@@ -37,7 +37,9 @@ Every fact on the v2 site comes from the 2023 site (tag `v1-2023`) or from Akden
 2. **Upload speeds of the home plans.** v1 only stated the download speed.
 3. **Billing details.** Are prices monthly, and do they include VAT (KDV)? v2 shows "/ay" (per month) but makes no VAT claim.
 4. **"Telefon yok".** v2 reads it as "no landline needed". Is that right?
-5. **Technology.** The 65 "verici noktası" (transmitter sites) and the slogan "fiber hızında internet" (fiber-_speed_ internet) suggest a wireless network, but v1 also listed "Fiber İnternet" as a service. Which technologies does each plan use? Until confirmed, v2 claims neither.
+5. **Technology.** The 65 "verici noktası" (transmitter sites) and the slogan "fiber hızında internet" (fiber-_speed_ internet) suggest a wireless network, but v1 also listed "Fiber İnternet" as a service, and the Google Maps listing is "Akdeniz Net | Kablosuz Fiber İnternet" (wireless fiber internet). Which technologies does each plan use? Until confirmed, v2 claims neither.
 6. **Current figures.** Transmitter sites and subscriber counts are from 2023.
 7. **A vector logo (SVG).** v2 uses the 334×78 PNG from v1.
 8. **Permission** to show the Akdeniznet name, logo and plans in a portfolio case study.
+9. **A KVKK notice (aydınlatma metni)** for the application and contact forms. Needed before the forms could collect real personal data; while this is a demo they deliver nothing.
+10. **Where applications should go** (email address or CRM) if the forms were ever connected. The hook is `src/lib/deliver.ts`.

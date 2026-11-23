@@ -5,7 +5,8 @@
   },
   "Common": {
     "skipToContent": "İçeriğe geç",
-    "opensInNewTab": "(yeni sekmede açılır)"
+    "opensInNewTab": "(yeni sekmede açılır)",
+    "whatsapp": "WhatsApp'tan yazın"
   },
   "DemoBanner": {
     "text": "Bu site bir portfolyo yeniden tasarımıdır.",
@@ -45,7 +46,20 @@
     "title": "Mersin'in interneti, taahhütsüz.",
     "lead": "Mersin'de ev ve iş yerleri için taahhütsüz internet. Tarifenizi seçin, hızınızı test edin, gerisini bize bırakın.",
     "ctaPlans": "Tarifeleri incele",
-    "ctaSpeedTest": "Hız testi yap"
+    "ctaSpeedTest": "Hız testi yap",
+    "eyebrow": "Mersin · {sites, number} verici noktası",
+    "segmentsTitle": "Size uygun interneti seçin",
+    "segmentsLead": "Eviniz ya da iş yeriniz için. Tüm tarifeler taahhütsüz.",
+    "segmentCta": "Tarifeleri gör",
+    "highlightsTitle": "Neden Akdeniznet?",
+    "statsTitle": "Rakamlarla Akdeniznet",
+    "speedTitle": "İnternetiniz ne kadar hızlı?",
+    "speedLead": "Bağlantınızın indirme, yükleme ve gecikme değerlerini ölçün.",
+    "speedCta": "Hız testine git",
+    "contactTitle": "Sorunuz mu var?",
+    "contactLead": "Bizi arayın ya da WhatsApp'tan yazın; size uygun tarifeyi birlikte seçelim.",
+    "contactApply": "Online başvur",
+    "callUs": "Bizi arayın"
   },
   "PlansPage": {
     "title": "Tarifeler",
@@ -57,7 +71,126 @@
   },
   "ContactPage": {
     "title": "İletişim",
-    "lead": "Sorularınız için bize telefonla, WhatsApp'tan ya da e-postayla ulaşın."
+    "lead": "Sorularınız için bize telefonla, WhatsApp'tan ya da e-postayla ulaşın.",
+    "call": "Arayın",
+    "write": "WhatsApp",
+    "email": "E-posta",
+    "visit": "Ofisimiz",
+    "directions": "Yol tarifi al",
+    "mapTitle": "Akdeniznet ofisinin haritası",
+    "loadMap": "Haritayı göster",
+    "mapNotice": "Harita, Google Haritalar'dan yüklenir.",
+    "formTitle": "Bize yazın",
+    "formLead": "Mesajınızı bırakın, size dönelim.",
+    "newCustomer": "Yeni abone olmak mı istiyorsunuz?",
+    "newCustomerLink": "Online başvuru formu"
+  },
+  "ApplyPage": {
+    "title": "Online başvuru",
+    "lead": "Formu doldurun; başvurunuzla ilgili sizinle iletişime geçelim.",
+    "selectedPlan": "Seçtiğiniz tarife",
+    "help": "Hangi tarifeyi seçeceğinizden emin değil misiniz?",
+    "helpLink": "Tarifeleri karşılaştırın"
+  },
+  "Forms": {
+    "fields": {
+      "plan": "Tarife",
+      "planPlaceholder": "Tarife seçin",
+      "fullName": "Ad soyad",
+      "phone": "Telefon",
+      "email": "E-posta",
+      "address": "Kurulum adresi",
+      "note": "Notunuz",
+      "message": "Mesajınız"
+    },
+    "hints": {
+      "phone": "Örn. 0532 123 45 67",
+      "address": "Mahalle, cadde veya sokak, bina ve daire no, ilçe",
+      "contactMethod": "Telefon ya da e-postadan en az birini yazın."
+    },
+    "optional": "isteğe bağlı",
+    "errors": {
+      "required": "Bu alan zorunlu.",
+      "fullName": "Lütfen adınızı ve soyadınızı yazın.",
+      "phone": "Geçerli bir telefon numarası yazın (örn. 0532 123 45 67).",
+      "email": "Geçerli bir e-posta adresi yazın.",
+      "plan": "Lütfen bir tarife seçin.",
+      "address": "Lütfen kurulum adresini yazın.",
+      "message": "Lütfen mesajınızı yazın.",
+      "contactMethod": "Telefon ya da e-postadan en az birini yazın.",
+      "consent": "Devam etmek için onay vermeniz gerekiyor.",
+      "tooLong": "Bu alan çok uzun.",
+      "summary": "Formda düzeltilmesi gereken {count, number} alan var.",
+      "server": "Bir sorun oluştu. Lütfen tekrar deneyin ya da bizi arayın."
+    },
+    "submitting": "Gönderiliyor…",
+    "demoNotice": "Bu site bir portfolyo demosudur: formunuz Akdeniznet'e iletilmedi. Gerçek başvuru ve sorular için {phone} numarasını arayın."
+  },
+  "ApplyForm": {
+    "consent": "Başvurumla ilgili benimle telefonla iletişime geçilmesini kabul ediyorum.",
+    "submit": "Başvuruyu gönder",
+    "successTitle": "Başvurunuz alındı",
+    "successBody": "Teşekkürler {name}. {plan} başvurunuzla ilgili sizi arayacağız.",
+    "another": "Yeni başvuru yap"
+  },
+  "ContactForm": {
+    "submit": "Mesajı gönder",
+    "successTitle": "Mesajınız alındı",
+    "successBody": "Teşekkürler {name}. En kısa sürede size dönüş yapacağız.",
+    "another": "Yeni mesaj yaz"
+  },
+  "SpeedTest": {
+    "start": "Testi başlat",
+    "restart": "Tekrar test et",
+    "idle": "Hazır olduğunuzda testi başlatın.",
+    "phases": {
+      "latency": "Gecikme ölçülüyor…",
+      "download": "İndirme hızı ölçülüyor…",
+      "upload": "Yükleme hızı ölçülüyor…"
+    },
+    "done": "Test tamamlandı",
+    "download": "İndirme",
+    "upload": "Yükleme",
+    "latency": "Gecikme",
+    "jitter": "Dalgalanma",
+    "mbps": "Mbps",
+    "ms": "ms",
+    "gaugeLabel": "{direction, select, download {Anlık indirme hızı} upload {Anlık yükleme hızı} other {Anlık hız}}",
+    "dataUsed": "Bu test yaklaşık {mb, number} MB veri kullandı.",
+    "dataWarning": "Test, bağlantınızın hızına göre en fazla yaklaşık {maxMb, number} MB veri kullanır; yavaş bağlantılarda çok daha az. Mobil veride dikkatli olun.",
+    "privacy": "Ölçüm, Cloudflare'in açık kaynak hız testi altyapısıyla yapılır. Sonuçlar Cloudflare tarafından toplu istatistik için kaydedilir.",
+    "error": "Test tamamlanamadı. Bağlantınızı kontrol edip tekrar deneyin.",
+    "suggestion": "Daha hızlı internet mi istiyorsunuz?",
+    "suggestionCta": "Tarifeleri incele"
+  },
+  "Faq": {
+    "title": "Sık sorulan sorular",
+    "items": {
+      "commitment": {
+        "q": "Taahhüt var mı?",
+        "a": "Hayır. Tüm tarifelerimiz taahhütsüzdür."
+      },
+      "phoneLine": {
+        "q": "Ev interneti için telefon hattı gerekir mi?",
+        "a": "Hayır. Ev tarifeleri için telefon hattı gerekmez."
+      },
+      "symmetric": {
+        "q": "Simetrik internet nedir?",
+        "a": "İndirme ve yükleme hızının aynı olduğu bağlantıdır. Örneğin Metro 20 tarifesinde iki yönde de 20 Mbps hız alırsınız."
+      },
+      "akn": {
+        "q": "AKN nedir?",
+        "a": "Adil kullanım kotası: belirli bir kullanımdan sonra hızı düşüren sınırdır. Kurumsal tarifelerimizde AKN yoktur."
+      },
+      "faults": {
+        "q": "Arıza olursa ne yapmalıyım?",
+        "a": "Arızanızı online bildirin; 24 saat içinde çözüyoruz."
+      },
+      "modem": {
+        "q": "Faturama sonradan modem ücreti eklenir mi?",
+        "a": "Hayır. Önce \"modem ücretsiz\" deyip sonra faturanıza modem ücreti yansıtmayız."
+      }
+    }
   },
   "Plans": {
     "segments": {
@@ -91,6 +224,24 @@
     "symmetric": "Simetrik",
     "asymmetric": "Asimetrik",
     "pricePerMonth": "{price, number, price}/ay",
+    "perMonth": "/ay",
+    "monthlyPrice": "Aylık ücret",
+    "apply": "Başvur",
+    "segmentNav": "Tarife türleri",
+    "compareTitle": "Tüm tarifeler tek tabloda",
+    "compareSummary": "Tabloyu göster",
+    "table": {
+      "plan": "Tarife",
+      "type": "Tür",
+      "price": "Aylık ücret",
+      "notStated": "Belirtilmemiş"
+    },
+    "explainer": {
+      "title": "Simetrik mi, asimetrik mi?",
+      "lead": "Fark, yükleme hızında.",
+      "symmetricBody": "İndirme ve yükleme aynı hızda. Görüntülü toplantılar, kamera kayıtları, sunucular ya da büyük dosyalarla dışarıya çok veri gönderiyorsanız simetrik hat seçin.",
+      "asymmetricBody": "Yükleme, indirmeden yavaş. Çoğunlukla e-posta, web ve bulut uygulamaları kullanan ofisler için daha uygun fiyatlı."
+    },
     "priceOnRequest": "Fiyat için arayın",
     "startingFrom": "Başlangıç fiyatı: {price, number, price}",
     "pricesAsOf": "Fiyatlar {asOf, date, monthYear} tarifesinden alınmıştır; güncel fiyatlar farklı olabilir."

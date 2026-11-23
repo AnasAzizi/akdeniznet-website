@@ -2,7 +2,7 @@
 
 Portfolio rebuild of **Akdeniznet**, an internet provider for homes and businesses in Mersin (Turkey), originally built in 2023 as a freelance project. **Audience:** Akdeniznet's customers (Turkish, many on phones); the case study speaks to employers. **Locales:** `tr` (default, unprefixed), `en` (`/en`). **Feel:** clear, local, trustworthy; brand blue with one orange call to action.
 
-The roadmap: Phase 0 baseline (done) → 1 foundation (done) → 2 plan data model (done) → 3 pages → 4 motion → 5 quality → 6 ship and case study. The "before" measurements are in `docs/case-study/baseline/README.md`; keep the "after" measurements comparable (same tools and settings).
+The roadmap: Phase 0 baseline (done) → 1 foundation (done) → 2 plan data model (done) → 3 pages (done) → 4 motion → 5 quality → 6 ship and case study. The "before" measurements are in `docs/case-study/baseline/README.md`; keep the "after" measurements comparable (same tools and settings).
 
 ## Workflow
 
@@ -50,6 +50,8 @@ The roadmap: Phase 0 baseline (done) → 1 foundation (done) → 2 plan data mod
 - Format prices with the named `price` format (`{price, number, price}` or `format.number(value, "price")`) and use `tabular-nums`. Avoid Turkish suffixes after numbers in messages (vowel harmony depends on the number).
 - While `site.isPortfolioDemo` is true: keep the demo banner and `noindex`, and forms must not send anything to Akdeniznet.
 - Customer login is Akdeniznet's own portal (`site.portalUrl`): link to it, never copy it.
+- Forms: Server Actions in `src/actions/forms.ts`, shared Zod schemas in `src/lib/forms.ts` (messages are error codes, shown via `Forms.errors.*`), delivery in `src/lib/deliver.ts` (nothing is sent while `isPortfolioDemo`). Client components that need text get only their namespaces via `<ClientMessages>`.
+- Speed test: `@cloudflare/speedtest`, loaded only on Start. The sequence in `src/components/speed-test/measurements.ts` caps data use (`MAX_TEST_MB`, shown to visitors); keep that number truthful if the sequence changes.
 
 ## Never
 
