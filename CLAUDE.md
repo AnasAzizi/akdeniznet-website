@@ -2,7 +2,7 @@
 
 Portfolio rebuild of **Akdeniznet**, an internet provider for homes and businesses in Mersin (Turkey), originally built in 2023 as a freelance project. **Audience:** Akdeniznet's customers (Turkish, many on phones); the case study speaks to employers. **Locales:** `tr` (default, unprefixed), `en` (`/en`). **Feel:** clear, local, trustworthy; brand blue with one orange call to action.
 
-The roadmap: Phase 0 baseline (done) → 1 foundation (done) → 2 plan data model (done) → 3 pages (done) → 4 motion (done) → 5 quality (done) → 6 ship and case study. The "before" measurements are in `docs/case-study/baseline/README.md`; keep the "after" measurements comparable (same tools and settings).
+The roadmap: Phase 0 baseline (done) → 1 foundation (done) → 2 plan data model (done) → 3 pages (done) → 4 motion (done) → 5 quality (done) → 6 ship and case study (done; live at https://akdeniznet-website.vercel.app, `main` deploys to production). The "before" measurements are in `docs/case-study/baseline/README.md`; keep the "after" measurements comparable (same tools and settings).
 
 ## Workflow
 
