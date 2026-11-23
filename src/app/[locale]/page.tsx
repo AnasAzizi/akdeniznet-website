@@ -4,11 +4,10 @@ import { getLocale, getTranslations } from "next-intl/server";
 
 import { buttonVariants } from "@/components/ui/button";
 import { Link } from "@/i18n/navigation";
-import type { Locale } from "@/i18n/routing";
 import { alternatesFor } from "@/lib/seo";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const locale = (await getLocale()) as Locale;
+  const locale = await getLocale();
   return { alternates: alternatesFor("/", locale) };
 }
 

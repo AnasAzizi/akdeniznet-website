@@ -47,7 +47,7 @@ export async function generateMetadata(): Promise<Metadata> {
       siteName: site.name,
       title: t("title"),
       description: t("description"),
-      locale: ogLocales[locale as keyof typeof ogLocales],
+      locale: ogLocales[locale],
     },
   };
 }

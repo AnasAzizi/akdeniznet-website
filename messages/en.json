@@ -43,7 +43,7 @@
   },
   "Home": {
     "title": "Mersin's internet, no commitment.",
-    "lead": "Wireless and fiber internet for homes and businesses. Pick a plan, test your speed, and leave the rest to us.",
+    "lead": "No-commitment internet for homes and businesses in Mersin. Pick a plan, test your speed, and leave the rest to us.",
     "ctaPlans": "Compare plans",
     "ctaSpeedTest": "Test your speed"
   },
@@ -58,5 +58,66 @@
   "ContactPage": {
     "title": "Contact",
     "lead": "Reach us by phone, WhatsApp or email."
+  },
+  "Plans": {
+    "segments": {
+      "home": {
+        "name": "Home",
+        "title": "Home internet",
+        "description": "No-commitment internet for your home. No landline needed."
+      },
+      "business-symmetric": {
+        "name": "Business symmetric",
+        "title": "Symmetric business internet",
+        "description": "The same speed up and down. For video calls, camera systems, servers and large uploads."
+      },
+      "business-asymmetric": {
+        "name": "Business asymmetric",
+        "title": "Asymmetric business internet",
+        "description": "Faster down than up. A lower-cost choice for offices that mostly use email, the web and cloud apps."
+      }
+    },
+    "features": {
+      "no-commitment": "No commitment",
+      "no-phone-line": "No landline needed",
+      "unlimited-data": "Unlimited data",
+      "no-fair-usage-cap": "No fair-usage speed cap"
+    },
+    "homePlanName": "{download, number} Mbps Internet",
+    "speed": "{download, number} Mbps",
+    "speedPair": "{download, number}/{upload, number} Mbps",
+    "download": "Download",
+    "upload": "Upload",
+    "symmetric": "Symmetric",
+    "asymmetric": "Asymmetric",
+    "pricePerMonth": "{price, number, price}/mo",
+    "priceOnRequest": "Call for a price",
+    "startingFrom": "From {price, number, price}",
+    "pricesAsOf": "Prices are from the {asOf, date, monthYear} price list; current prices may differ."
+  },
+  "Stats": {
+    "transmitterSites": "Transmitter sites",
+    "subscribers": "Subscribers",
+    "homeSubscribers": "Home subscribers",
+    "businessSubscribers": "Business subscribers",
+    "asOf": "As of {asOf, date, monthYear}"
+  },
+  "Highlights": {
+    "noCommitment": {
+      "title": "No commitment",
+      "body": "Every plan is contract-free. No long-term agreement to sign."
+    },
+    "transparentPricing": {
+      "title": "Transparent pricing",
+      "body": "We never advertise a \"free modem\" and then add a modem fee to your bill."
+    },
+    "fastRepairs": {
+      "title": "Repairs within 24 hours",
+      "body": "Report a fault online and we fix it within 24 hours."
+    },
+    "localNetwork": {
+      "title": "Mersin's local network",
+      "body": "{sites, number} transmitter sites and {subscribers, number} subscribers across Mersin."
+    }
   }
 }

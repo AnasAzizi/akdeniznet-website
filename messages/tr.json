@@ -43,7 +43,7 @@
   },
   "Home": {
     "title": "Mersin'in interneti, taahhütsüz.",
-    "lead": "Ev ve iş yerleri için kablosuz ve fiber internet. Tarifenizi seçin, hızınızı test edin, gerisini bize bırakın.",
+    "lead": "Mersin'de ev ve iş yerleri için taahhütsüz internet. Tarifenizi seçin, hızınızı test edin, gerisini bize bırakın.",
     "ctaPlans": "Tarifeleri incele",
     "ctaSpeedTest": "Hız testi yap"
   },
@@ -58,5 +58,66 @@
   "ContactPage": {
     "title": "İletişim",
     "lead": "Sorularınız için bize telefonla, WhatsApp'tan ya da e-postayla ulaşın."
+  },
+  "Plans": {
+    "segments": {
+      "home": {
+        "name": "Ev",
+        "title": "Ev interneti",
+        "description": "Evinize taahhütsüz internet. Telefon hattı gerekmez."
+      },
+      "business-symmetric": {
+        "name": "Kurumsal simetrik",
+        "title": "Simetrik kurumsal internet",
+        "description": "İndirme ve yükleme hızı aynı. Görüntülü görüşmeler, kamera sistemleri, sunucular ve büyük dosya yüklemeleri için."
+      },
+      "business-asymmetric": {
+        "name": "Kurumsal asimetrik",
+        "title": "Asimetrik kurumsal internet",
+        "description": "İndirme hızı yüklemeden yüksek. E-posta, web ve bulut uygulamalarıyla çalışan ofisler için daha uygun fiyatlı."
+      }
+    },
+    "features": {
+      "no-commitment": "Taahhüt yok",
+      "no-phone-line": "Telefon hattı gerekmez",
+      "unlimited-data": "Sınırsız kullanım",
+      "no-fair-usage-cap": "Adil kullanım kotası (AKN) yok"
+    },
+    "homePlanName": "{download, number} Mbps İnternet",
+    "speed": "{download, number} Mbps",
+    "speedPair": "{download, number}/{upload, number} Mbps",
+    "download": "İndirme",
+    "upload": "Yükleme",
+    "symmetric": "Simetrik",
+    "asymmetric": "Asimetrik",
+    "pricePerMonth": "{price, number, price}/ay",
+    "priceOnRequest": "Fiyat için arayın",
+    "startingFrom": "Başlangıç fiyatı: {price, number, price}",
+    "pricesAsOf": "Fiyatlar {asOf, date, monthYear} tarifesinden alınmıştır; güncel fiyatlar farklı olabilir."
+  },
+  "Stats": {
+    "transmitterSites": "Verici noktası",
+    "subscribers": "Abone",
+    "homeSubscribers": "Bireysel abone",
+    "businessSubscribers": "Kurumsal abone",
+    "asOf": "{asOf, date, monthYear} itibarıyla"
+  },
+  "Highlights": {
+    "noCommitment": {
+      "title": "Taahhüt yok",
+      "body": "Tüm tarifeler taahhütsüz. Uzun süreli sözleşme imzalamazsınız."
+    },
+    "transparentPricing": {
+      "title": "Şeffaf fiyat",
+      "body": "Önce \"modem ücretsiz\" deyip sonra faturanıza modem ücreti eklemeyiz."
+    },
+    "fastRepairs": {
+      "title": "24 saatte arıza çözümü",
+      "body": "Arızayı online bildirin, 24 saat içinde çözelim."
+    },
+    "localNetwork": {
+      "title": "Mersin'in yerel ağı",
+      "body": "Mersin genelinde {sites, number} verici noktası, {subscribers, number} abone."
+    }
   }
 }

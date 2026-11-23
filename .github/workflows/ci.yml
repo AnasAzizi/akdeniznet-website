@@ -13,7 +13,7 @@ permissions:
 
 jobs:
   check:
-    name: Lint, typecheck, format, i18n, contrast, build
+    name: Lint, typecheck, format, i18n, contrast, data, build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
@@ -27,4 +27,5 @@ jobs:
       - run: npm run format:check
       - run: npm run i18n:check
       - run: npm run contrast:check
+      - run: npm run data:check
       - run: npm run build

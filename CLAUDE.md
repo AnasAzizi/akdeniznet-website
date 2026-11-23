@@ -2,12 +2,12 @@
 
 Portfolio rebuild of **Akdeniznet**, an internet provider for homes and businesses in Mersin (Turkey), originally built in 2023 as a freelance project. **Audience:** Akdeniznet's customers (Turkish, many on phones); the case study speaks to employers. **Locales:** `tr` (default, unprefixed), `en` (`/en`). **Feel:** clear, local, trustworthy; brand blue with one orange call to action.
 
-The roadmap: Phase 0 baseline (done) → 1 foundation (done) → 2 plan data model → 3 pages → 4 motion → 5 quality → 6 ship and case study. The "before" measurements are in `docs/case-study/baseline/README.md`; keep the "after" measurements comparable (same tools and settings).
+The roadmap: Phase 0 baseline (done) → 1 foundation (done) → 2 plan data model (done) → 3 pages → 4 motion → 5 quality → 6 ship and case study. The "before" measurements are in `docs/case-study/baseline/README.md`; keep the "after" measurements comparable (same tools and settings).
 
 ## Workflow
 
 - Work on the **`v2`** branch. `main` holds v1, which is still deployed; never push to `main` or rewrite pushed history.
-- Before calling a task done, run `npm run check` and `npm run build`; all must pass.
+- Before calling a task done, run `npm run check` and `npm run build`; all must pass. `next build` and `next dev` share `.next/`: stop the dev server before a build (or restart it afterwards).
 - Use Conventional Commits (`feat:`, `fix:`, `docs:`, `chore:`, `refactor:`). Commit or push only when asked.
 - Explain important technical decisions briefly, and push back when a better option exists.
 
@@ -44,7 +44,10 @@ The roadmap: Phase 0 baseline (done) → 1 foundation (done) → 2 plan data mod
 
 ## Content and data
 
-- **Never invent facts, stats, prices or testimonials.** Real data comes from the v1 site (tag `v1-2023`) or from Akdeniznet. v1 prices are from 2023: label them as such until the client confirms current ones.
+- **Never invent facts, stats, prices or testimonials.** Real data comes from the v1 site (tag `v1-2023`) or from Akdeniznet; `docs/content-sources.md` records the source of every fact and the open questions for the client. v1 prices are from September 2023: show `Plans.pricesAsOf` next to prices until `planSource.confirmed` is true.
+- Plans, stats and highlights live in `src/data/` (Zod-validated on import; `npm run data:check` also renders every message in both locales). Never store what can be derived: symmetric/asymmetric comes from the speeds, the subscriber total from its parts.
+- Don't claim wireless or fiber technology until Akdeniznet confirms it.
+- Format prices with the named `price` format (`{price, number, price}` or `format.number(value, "price")`) and use `tabular-nums`. Avoid Turkish suffixes after numbers in messages (vowel harmony depends on the number).
 - While `site.isPortfolioDemo` is true: keep the demo banner and `noindex`, and forms must not send anything to Akdeniznet.
 - Customer login is Akdeniznet's own portal (`site.portalUrl`): link to it, never copy it.
 

@@ -2,11 +2,10 @@ import type { Metadata } from "next";
 import { getLocale, getTranslations } from "next-intl/server";
 
 import { PageIntro } from "@/components/layout/page-intro";
-import type { Locale } from "@/i18n/routing";
 import { alternatesFor } from "@/lib/seo";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const locale = (await getLocale()) as Locale;
+  const locale = await getLocale();
   const t = await getTranslations("ContactPage");
   return {
     title: t("title"),

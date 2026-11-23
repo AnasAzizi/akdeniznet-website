@@ -36,6 +36,7 @@ Copy `.env.example` to `.env.local` and set `NEXT_PUBLIC_SITE_URL` for productio
 | `npm run format` / `format:check` | Prettier (with Tailwind class sorting)                     |
 | `npm run i18n:check`              | Every English message key exists in Turkish and vice versa |
 | `npm run contrast:check`          | Every color pair the design uses meets WCAG 2.2 AA         |
+| `npm run data:check`              | Validates the plan data and renders it in every language   |
 | `npm run check`                   | All of the checks above except the build                   |
 
 CI runs all of them, plus the build, on every push and pull request.
@@ -44,12 +45,14 @@ CI runs all of them, plus the build, on every push and pull request.
 
 ```
 messages/{tr,en}.json     All user-facing text (Turkish is the source)
-scripts/                  CI checks (messages, contrast)
+docs/content-sources.md   Where every fact comes from, and questions for the client
+scripts/                  CI checks (messages, contrast, data)
 src/app/[locale]/         Pages (one route per page, prerendered per locale)
 src/components/layout/    Header, footer, navigation, demo banner
 src/components/motion/    Server-side motion markers + the lazy motion loader
 src/components/ui/        shadcn/ui-style primitives
-src/data/site.ts          Locale-independent facts (contact details, hours, links)
+src/data/                 Locale-independent facts: plans (Zod-validated), stats,
+                          highlights, contact details, hours, links
 src/i18n/                 Locales, localized pathnames, navigation helpers
 src/lib/motion-runtime.ts All GSAP code, imported lazily
 src/proxy.ts              Locale routing (Next 16's renamed middleware)
